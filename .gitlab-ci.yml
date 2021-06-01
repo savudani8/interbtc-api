@@ -37,7 +37,7 @@ services:
           - --rpc-methods
           - Unsafe
           - --dev
-    - image: "ruimarinho/bitcoin-core:0.21"
+    - name: "ruimarinho/bitcoin-core:0.21"
       alias: bitcoind
       command:
           - -regtest
@@ -47,7 +47,7 @@ services:
           - -rpcuser=rpcuser
           - -rpcpassword=rpcpassword
           - -fallbackfee=0.0002
-    - image: "registry.gitlab.com/interlay/polkabtc-clients/faucet:0-7-5"
+    - name: "registry.gitlab.com/interlay/polkabtc-clients/faucet:0-7-5"
       alias: faucet
       command:
           - /bin/sh
