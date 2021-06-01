@@ -57,6 +57,27 @@ services:
               echo "Sleeping..."
               sleep 5
               faucet --keyfile="keyfile.json" --keyname=bob_stash --btc-parachain-url 'ws://localhost:9944' --user-allowance 1 --vault-allowance 500 --http-addr '[::0]:3036'
+    - name: "ruimarinho/bitcoin-core:0.21"
+      alias: bitcoin-cli
+      command:
+          - /bin/sh
+          - -c
+          - |
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword createwallet Alice
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword createwallet Bob
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword createwallet Charlie
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword createwallet Dave
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword createwallet Eve
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword createwallet Ferdie
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword loadwallet Alice
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword loadwallet Bob
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword loadwallet Charlie
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword loadwallet Dave
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword loadwallet Eve
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword loadwallet Ferdie
+              ALICE_ADDRESS=$$(bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword -rpcwallet=Alice getnewaddress)
+              # coins need 100 confirmations to be spendable
+              bitcoin-cli -regtest -rpcconnect=bitcoind -rpcwait -rpcuser=rpcuser -rpcpassword=rpcpassword generatetoaddress 101 $${ALICE_ADDRESS}
 
 build:
     stage: build
