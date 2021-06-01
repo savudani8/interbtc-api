@@ -1,0 +1,80 @@
+image: node:15-buster
+
+stages:
+  - build
+  - test
+  - deploy
+  - release
+
+cache:
+  paths:
+    - node_modules/
+
+variables:
+  REACT_APP_STATIC_PAGE_ONLY: "false"
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_BRANCH
+
+.only-refs: &only_refs
+  only:
+    - master
+    - prod
+    - dev
+    - rococo
+    - beta
+    - tags
+
+services:
+  - name: registry.gitlab.com/interlay/btc-parachain:master-1b4a8dc5-1622454849
+    alias: btc-parachain
+    command:
+    - btc-parachain
+    - --rpc-external
+    - --ws-external
+    - --rpc-methods
+    - Unsafe
+    - --dev
+
+build:
+  stage: build
+  script:
+    - yarn
+    - yarn build
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - build
+
+test-release:
+  stage: test
+  script:
+    - yarn
+    - yarn ci:test
+
+build_container:
+  stage: deploy
+
+  image:
+    name: gcr.io/kaniko-project/executor:v1.5.1-debug
+    entrypoint: [""]
+  script:
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - |
+      /kaniko/executor --context $CI_PROJECT_DIR \
+        --dockerfile $CI_PROJECT_DIR/DockerfileProd \
+        --destination $CI_REGISTRY_IMAGE:${CI_COMMIT_BRANCH}-$CI_COMMIT_SHORT_SHA \
+        --destination $CI_REGISTRY_IMAGE:${CI_COMMIT_BRANCH}
+  <<: *only_refs
+
+github_changelog:
+  stage: release
+  image: registry.gitlab.com/interlay/containers/github-publisher:master
+  script:
+    - gh auth status
+    - git-chglog --output CHANGELOG.md $CI_COMMIT_TAG
+    - gh release -R https://github.com/interlay/polkabtc-ui create $CI_COMMIT_TAG --title $CI_COMMIT_TAG -F CHANGELOG.md -d
+  only:
+    - tags
