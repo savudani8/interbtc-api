@@ -32,8 +32,9 @@ import {
 } from "../../test/config";
 
 // Command line arguments of the initialization script
-const yargs = require("yargs/yargs");
-const { hideBin } = require("yargs/helpers");
+import yargs from "yargs/yargs";
+import {hideBin} from "yargs/helpers";
+
 const argv = yargs(hideBin(process.argv))
     .option("initialize", {
         type: "boolean",
@@ -95,7 +96,6 @@ export interface InitializationParams {
     enableNomination?: boolean;
     issue?: true | InitializeIssue;
     redeem?: true | InitializeRedeem;
-    delayMs: number;
 }
 
 function getDefaultInitializationParams(keyring: Keyring, vaultAddress: string): InitializationParams {
@@ -120,7 +120,6 @@ function getDefaultInitializationParams(keyring: Keyring, vaultAddress: string):
             redeemingAccount: keyring.addFromUri("//Alice"),
             redeemingBTCAddress: DEFAULT_REDEEM_ADDRESS,
         },
-        delayMs: 0,
     };
 }
 
