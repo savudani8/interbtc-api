@@ -2,6 +2,7 @@ import { ApiPromise, Keyring } from "@polkadot/api";
 import * as bitcoinjs from "bitcoinjs-lib";
 import { KeyringPair } from "@polkadot/keyring/types";
 import { InterBtc, InterBtcAmount, Kusama, Polkadot } from "@interlay/monetary-js";
+import { InterbtcPrimitivesVaultId } from "../../../../src/index";
 
 import { ElectrsAPI, DefaultElectrsAPI } from "../../../../src/external/electrs";
 import { BitcoinCoreClient } from "../../../../src/utils/bitcoin-core-client";
@@ -23,7 +24,7 @@ import {
 } from "../../../config";
 import { assert } from "../../../chai";
 import { issueSingle } from "../../../../src/utils/issueRedeem";
-import { CollateralCurrency, currencyIdToMonetaryCurrency, DefaultReplaceAPI, newAccountId, newVaultId, ReplaceAPI, tickerToMonetaryCurrency, VaultId, WrappedCurrency } from "../../../../src";
+import { CollateralCurrency, currencyIdToMonetaryCurrency, DefaultReplaceAPI, newAccountId, newVaultId, ReplaceAPI, tickerToMonetaryCurrency, WrappedCurrency } from "../../../../src";
 import { SLEEP_TIME_MS, sleep } from "../../../utils/helpers";
 
 describe("replace", () => {
@@ -34,9 +35,9 @@ describe("replace", () => {
     let keyring: Keyring;
     let userAccount: KeyringPair;
     let vault_3: KeyringPair;
-    let vault_3_id: VaultId;
+    let vault_3_id: InterbtcPrimitivesVaultId;
     let vault_2: KeyringPair;
-    let vault_2_id: VaultId;
+    let vault_2_id: InterbtcPrimitivesVaultId;
 
     let nativeCurrency: CollateralCurrency;
     let wrappedCurrency: WrappedCurrency;
@@ -68,11 +69,9 @@ describe("replace", () => {
     });
 
     describe("request", () => {
-        let replaceId: string;
-
         it("should request vault replacement", async () => {
-            const issueAmount = InterBtcAmount.from.BTC(0.001);
-            const replaceAmount = InterBtcAmount.from.BTC(0.0005);
+            const issueAmount = InterBtcAmount.from.BTC(0.00005);
+            const replaceAmount = InterBtcAmount.from.BTC(0.00004);
             await issueSingle(
                 api,
                 electrsAPI,
@@ -83,10 +82,10 @@ describe("replace", () => {
                 vault_3_id
             );
             replaceAPI.setAccount(vault_3);
-            replaceId = await replaceAPI.request(replaceAmount, currencyIdToMonetaryCurrency(vault_3_id.currencies.collateral) as CollateralCurrency);
+            await replaceAPI.request(replaceAmount, currencyIdToMonetaryCurrency(vault_3_id.currencies.collateral) as CollateralCurrency);
 
             replaceAPI.setAccount(vault_2);
-            replaceId = await replaceAPI.request(replaceAmount, currencyIdToMonetaryCurrency(vault_2_id.currencies.collateral) as CollateralCurrency);
+            await replaceAPI.request(replaceAmount, currencyIdToMonetaryCurrency(vault_2_id.currencies.collateral) as CollateralCurrency);
         }).timeout(200000);
 
         // This test assumes the request replace test was successful
@@ -103,6 +102,7 @@ describe("replace", () => {
             const firstMapEntry = requestsMap.values().next();
             // `deepEqual` fails with: Cannot convert 'Pending' via asCancelled
             // Need to manually compare some fields
+            // Check the first element to ensure parsing is correct
             assert.equal(requestsList[0].btcAddress, firstMapEntry.value.btcAddress);
             assert.equal(requestsList[0].amount.toString(), firstMapEntry.value.amount.toString());
             assert.equal(requestsList[0].btcHeight.toString(), firstMapEntry.value.btcHeight.toString());
@@ -130,7 +130,7 @@ describe("replace", () => {
         const vault3Id = newAccountId(api, vault_3.address);
         const replaceRequests = await replaceAPI.mapReplaceRequests(vault3Id);
         replaceRequests.forEach((request) => {
-            assert.deepEqual(request.oldVault.account_id, vault3Id);
+            assert.deepEqual(request.oldVault.accountId, vault3Id);
         });
     });
 

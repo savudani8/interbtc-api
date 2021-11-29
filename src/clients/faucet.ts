@@ -31,7 +31,7 @@ export class FaucetClient extends JsonRpcClient<void> {
         const currencyId = newCurrencyId(this.api, currencyIdLiteral);
         const request = new this.constr["FundAccountJsonRpcRequest"](this.registry, {
             account_id: account,
-            currency_id: currencyId
+            currency_id: currencyId,
         });
         await this.post("fund_account", [request.toHex()]);
     }

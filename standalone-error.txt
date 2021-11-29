@@ -1,0 +1,77 @@
+$ docker-compose up
+Creating network "interbtc-api_default" with the default driver
+WARNING: Found orphan containers (interbtc-api_faucet_1, interbtc-api_vault_to_ban_1, interbtc-api_vault_2_1, interbtc-api_vault_to_liquidate_1, interbtc-api_bitcoind_1, interbtc-api_electrs_1, interbtc-api_postgres_1, interbtc-api_vault_1_1, interbtc-api_bitcoin-cli_1, interbtc-api_oracle_1, interbtc-api_vault_3_1) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up.
+Creating interbtc-api_interbtc_1 ... done
+Attaching to interbtc-api_interbtc_1
+interbtc_1  | 2021-11-10 13:34:24 It isn't safe to expose RPC publicly without a proxy server that filters available set of RPC methods.    
+interbtc_1  | 2021-11-10 13:34:24 It isn't safe to expose RPC publicly without a proxy server that filters available set of RPC methods.    
+interbtc_1  | 2021-11-10 13:34:24 Running in --dev mode, RPC CORS has been disabled.    
+interbtc_1  | 2021-11-10 13:34:24 interBTC Parachain    
+interbtc_1  | 2021-11-10 13:34:24 ✌️  version 1.2.0-71121cc0-x86_64-linux-gnu    
+interbtc_1  | 2021-11-10 13:34:24 ❤️  by Interlay Ltd, 2017-2021    
+interbtc_1  | 2021-11-10 13:34:24 📋 Chain specification: interBTC    
+interbtc_1  | 2021-11-10 13:34:24 🏷 Node name: roomy-flag-5365    
+interbtc_1  | 2021-11-10 13:34:24 👤 Role: AUTHORITY    
+interbtc_1  | 2021-11-10 13:34:24 💾 Database: RocksDb at /root/.local/share/interbtc-standalone/chains/dev_testnet/db/full    
+interbtc_1  | 2021-11-10 13:34:24 ⛓  Native runtime: interbtc-standalone-1 (interbtc-standalone-1.tx1.au1)    
+interbtc_1  | 2021-11-10 13:34:24 🔨 Initializing Genesis block/state (state: 0x6a73…097a, header-hash: 0x4775…32aa)    
+interbtc_1  | 2021-11-10 13:34:24 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.    
+interbtc_1  | 2021-11-10 13:34:25 Using default protocol ID "sup" because none is configured in the chain specs    
+interbtc_1  | 2021-11-10 13:34:25 🏷 Local node identity is: 12D3KooWJNsgKHCnzM9rymeo41r9q2fPpvhMPT1CxurquMc7y7Pg    
+interbtc_1  | 
+interbtc_1  | ====================
+interbtc_1  | 
+interbtc_1  | Version: 1.2.0-71121cc0-x86_64-linux-gnu
+interbtc_1  | 
+interbtc_1  |    0: sp_panic_handler::set::{{closure}}
+interbtc_1  |    1: std::panicking::rust_panic_with_hook
+interbtc_1  |              at rustc/5b210643ebf2485aafdf2494de8cf41941a64e95/library/std/src/panicking.rs:628:17
+interbtc_1  |    2: std::panicking::begin_panic::{{closure}}
+interbtc_1  |    3: std::sys_common::backtrace::__rust_end_short_backtrace
+interbtc_1  |    4: std::panicking::begin_panic
+interbtc_1  |    5: hyper_rustls::connector::HttpsConnector<hyper::client::connect::http::HttpConnector>::with_native_roots
+interbtc_1  |    6: sc_offchain::api::http::SharedClient::new
+interbtc_1  |    7: sc_offchain::OffchainWorkers<Client,Block>::new
+interbtc_1  |    8: sc_service::builder::build_offchain_workers
+interbtc_1  |    9: interbtc_standalone::service::new_full
+interbtc_1  |   10: <core::future::from_generator::GenFuture<T> as core::future::future::Future>::poll
+interbtc_1  |   11: std::thread::local::LocalKey<T>::with
+interbtc_1  |   12: tokio::park::thread::CachedParkThread::block_on
+interbtc_1  |   13: tokio::runtime::thread_pool::ThreadPool::block_on
+interbtc_1  |   14: tokio::runtime::Runtime::block_on
+interbtc_1  |   15: sc_cli::runner::Runner<C>::run_node_until_exit
+interbtc_1  |   16: interbtc_standalone::command::run
+interbtc_1  |   17: interbtc_standalone::main
+interbtc_1  |   18: std::sys_common::backtrace::__rust_begin_short_backtrace
+interbtc_1  |   19: std::rt::lang_start::{{closure}}
+interbtc_1  |   20: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+interbtc_1  |              at rustc/5b210643ebf2485aafdf2494de8cf41941a64e95/library/core/src/ops/function.rs:259:13
+interbtc_1  |       std::panicking::try::do_call
+interbtc_1  |              at rustc/5b210643ebf2485aafdf2494de8cf41941a64e95/library/std/src/panicking.rs:403:40
+interbtc_1  |       std::panicking::try
+interbtc_1  |              at rustc/5b210643ebf2485aafdf2494de8cf41941a64e95/library/std/src/panicking.rs:367:19
+interbtc_1  |       std::panic::catch_unwind
+interbtc_1  |              at rustc/5b210643ebf2485aafdf2494de8cf41941a64e95/library/std/src/panic.rs:133:14
+interbtc_1  |       std::rt::lang_start_internal::{{closure}}
+interbtc_1  |              at rustc/5b210643ebf2485aafdf2494de8cf41941a64e95/library/std/src/rt.rs:128:48
+interbtc_1  |       std::panicking::try::do_call
+interbtc_1  |              at rustc/5b210643ebf2485aafdf2494de8cf41941a64e95/library/std/src/panicking.rs:403:40
+interbtc_1  |       std::panicking::try
+interbtc_1  |              at rustc/5b210643ebf2485aafdf2494de8cf41941a64e95/library/std/src/panicking.rs:367:19
+interbtc_1  |       std::panic::catch_unwind
+interbtc_1  |              at rustc/5b210643ebf2485aafdf2494de8cf41941a64e95/library/std/src/panic.rs:133:14
+interbtc_1  |       std::rt::lang_start_internal
+interbtc_1  |              at rustc/5b210643ebf2485aafdf2494de8cf41941a64e95/library/std/src/rt.rs:128:20
+interbtc_1  |   21: main
+interbtc_1  |   22: __libc_start_main
+interbtc_1  |   23: _start
+interbtc_1  | 
+interbtc_1  | 
+interbtc_1  | Thread 'main' panicked at 'no CA certificates found', /home/dan/.cargo/registry/src/github.com-1ecc6299db9ec823/hyper-rustls-0.22.1/src/connector.rs:45
+interbtc_1  | 
+interbtc_1  | This is a bug. Please report it at:
+interbtc_1  | 
+interbtc_1  | 	https://github.com/interlay/interbtc/issues/new
+interbtc_1  | 
+interbtc-api_interbtc_1 exited with code 1
+

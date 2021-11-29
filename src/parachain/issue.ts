@@ -1,12 +1,12 @@
 import { ApiPromise } from "@polkadot/api";
 import { AddressOrPair, SubmittableExtrinsic } from "@polkadot/api/submittable/types";
 import { Bytes, Option } from "@polkadot/types";
-import { AccountId, H256, Hash, EventRecord, Header } from "@polkadot/types/interfaces";
+import { AccountId, H256, Hash, EventRecord } from "@polkadot/types/interfaces";
 import { Network } from "bitcoinjs-lib";
 import Big from "big.js";
 import { Bitcoin, BitcoinUnit, Currency, MonetaryAmount } from "@interlay/monetary-js";
+import { InterbtcPrimitivesIssueIssueRequest, InterbtcPrimitivesVaultId } from "@polkadot/types/lookup";
 
-import { IssueRequest, VaultId } from "../interfaces/default";
 import { DefaultVaultsAPI, VaultsAPI } from "./vaults";
 import {
     decodeFixedPointType,
@@ -20,6 +20,8 @@ import {
     newMonetaryAmount,
     newVaultId,
     newCurrencyId,
+    encodeVaultId,
+    decodeVaultId,
 } from "../utils";
 import { DefaultFeeAPI, FeeAPI } from "./fee";
 import { ElectrsAPI } from "../external";
@@ -31,11 +33,8 @@ import {
     currencyIdToLiteral,
     currencyIdToMonetaryCurrency,
     Issue,
-    IssueStatus,
-    tickerToCurrencyIdLiteral,
     WrappedCurrency,
 } from "../types";
-import BN from "bn.js";
 
 export type IssueLimits = {
     singleVaultMaxIssuable: MonetaryAmount<WrappedCurrency, BitcoinUnit>;
@@ -53,7 +52,7 @@ export interface IssueAPI extends TransactionAPI {
      * parachain (incurring an extra request).
      * @returns An object of type {singleVault, maxTotal, vaultsCache}
      */
-    getRequestLimits(vaults?: Map<VaultId, MonetaryAmount<WrappedCurrency, BitcoinUnit>>): Promise<IssueLimits>;
+    getRequestLimits(vaults?: Map<string, MonetaryAmount<WrappedCurrency, BitcoinUnit>>): Promise<IssueLimits>;
 
     /**
      * Request issuing wrapped tokens (e.g. interBTC, kBTC).
@@ -71,7 +70,7 @@ export interface IssueAPI extends TransactionAPI {
         collateralCurrencyIdLiteral?: CurrencyIdLiteral,
         atomic?: boolean,
         retries?: number,
-        availableVaults?: Map<VaultId, MonetaryAmount<WrappedCurrency, BitcoinUnit>>
+        availableVaults?: Map<string, MonetaryAmount<WrappedCurrency, BitcoinUnit>>
     ): Promise<Issue[]>;
 
     /**
@@ -83,7 +82,7 @@ export interface IssueAPI extends TransactionAPI {
      * @throws Rejects the promise if none of the requests succeeded (or if at least one failed, when atomic=true).
      */
     requestAdvanced(
-        amountsPerVault: Map<VaultId, MonetaryAmount<WrappedCurrency, BitcoinUnit>>,
+        amountsPerVault: Map<string, MonetaryAmount<WrappedCurrency, BitcoinUnit>>,
         atomic: boolean
     ): Promise<Issue[]>;
 
@@ -123,12 +122,6 @@ export interface IssueAPI extends TransactionAPI {
      */
     list(): Promise<Issue[]>;
     /**
-     * @param account The ID of the account whose issue requests are to be retrieved
-     * @returns A mapping from the issue request ID to the issue request object, corresponding to the requests of
-     * the given account
-     */
-    mapForUser(account: AccountId): Promise<Map<H256, Issue>>;
-    /**
      * @param issueId The ID of the issue request to fetch
      * @returns An issue request object
      */
@@ -158,21 +151,6 @@ export interface IssueAPI extends TransactionAPI {
         amount: MonetaryAmount<WrappedCurrency, BitcoinUnit>,
         collateralCurrency: Currency<C>
     ): Promise<MonetaryAmount<Currency<C>, C>>;
-    /**
-     * Whenever an issue request associated with `account` expires, call the callback function with the
-     * ID of the expired request. Already expired requests are stored in memory, so as not to call back
-     * twice for the same request.
-     * @param account The ID of the account whose issue requests are to be checked for expiry
-     * @param callback Function to be called whenever an issue request expires
-     */
-    subscribeToIssueExpiry(account: AccountId, callback: (requestIssueId: H256) => void): Promise<() => void>;
-    /**
-     * Fetch the issue requests associated with a vault
-     *
-     * @param vaultId The AccountId of the vault used to filter issue requests
-     * @returns A map with issue ids to issue requests involving said vault
-     */
-    mapIssueRequests(vaultId: AccountId): Promise<Map<H256, Issue>>;
 }
 
 export class DefaultIssueAPI extends DefaultTransactionAPI implements IssueAPI {
@@ -192,9 +170,14 @@ export class DefaultIssueAPI extends DefaultTransactionAPI implements IssueAPI {
         this.feeAPI = new DefaultFeeAPI(api, wrappedCurrency);
     }
 
-    async getRequestLimits(vaults?: Map<VaultId, MonetaryAmount<WrappedCurrency, BitcoinUnit>>): Promise<IssueLimits> {
+    async getRequestLimits(vaults?: Map<string, MonetaryAmount<WrappedCurrency, BitcoinUnit>>): Promise<IssueLimits> {
         if (!vaults) vaults = await this.vaultsAPI.getVaultsWithIssuableTokens();
-        const vaultsArr = [...vaults.entries()];
+        const vaultsArr = [...vaults.entries()]
+            .sort(
+                // sort in descending order
+                ([_id_1, amount_1], [_id_2, amount_2]) => amount_2.sub(amount_1).toBig().toNumber()
+            );
+
         if (vaultsArr.length === 0) {
             return {
                 singleVaultMaxIssuable: newMonetaryAmount(0, this.wrappedCurrency),
@@ -223,7 +206,7 @@ export class DefaultIssueAPI extends DefaultTransactionAPI implements IssueAPI {
         collateralCurrencyIdLiteral?: CurrencyIdLiteral,
         atomic: boolean = true,
         retries: number = 0,
-        cachedVaults?: Map<VaultId, MonetaryAmount<WrappedCurrency, BitcoinUnit>>
+        cachedVaults?: Map<string, MonetaryAmount<WrappedCurrency, BitcoinUnit>>,
     ): Promise<Issue[]> {
         try {
             if (vaultAccountId) {
@@ -241,8 +224,8 @@ export class DefaultIssueAPI extends DefaultTransactionAPI implements IssueAPI {
                     currencyIdToMonetaryCurrency(collateralCurrencyId) as CollateralCurrency,
                     this.wrappedCurrency
                 );
-                const amountsPerVault = new Map<VaultId, MonetaryAmount<WrappedCurrency, BitcoinUnit>>([
-                    [vaultId, amount],
+                const amountsPerVault = new Map<string, MonetaryAmount<WrappedCurrency, BitcoinUnit>>([
+                    [encodeVaultId(vaultId), amount],
                 ]);
                 return await this.requestAdvanced(amountsPerVault, atomic);
             }
@@ -273,11 +256,11 @@ export class DefaultIssueAPI extends DefaultTransactionAPI implements IssueAPI {
     }
 
     async craftRequestTx(
-        vaultId: VaultId,
+        vaultId: InterbtcPrimitivesVaultId,
         amount: MonetaryAmount<WrappedCurrency, BitcoinUnit>
     ): Promise<SubmittableExtrinsic<"promise">> {
         const collateralId = currencyIdToLiteral(vaultId.currencies.collateral);
-        const vault = await this.vaultsAPI.get(vaultId.account_id, collateralId);
+        const vault = await this.vaultsAPI.get(vaultId.accountId, collateralId);
         let griefingCollateral = await this.getGriefingCollateral(amount, vault.collateralCurrency);
         // add() here is a hacky workaround for rounding errors
         const oneHundred = newMonetaryAmount(100, vault.collateralCurrency);
@@ -290,14 +273,17 @@ export class DefaultIssueAPI extends DefaultTransactionAPI implements IssueAPI {
     }
 
     async requestAdvanced(
-        amountsPerVault: Map<VaultId, MonetaryAmount<WrappedCurrency, BitcoinUnit>>,
+        amountsPerVault: Map<string, MonetaryAmount<WrappedCurrency, BitcoinUnit>>,
         atomic: boolean
     ): Promise<Issue[]> {
         const txs = await Promise.all(
             Array.from(amountsPerVault.entries()).map(
                 ([vaultId, amount]) =>
                     new Promise<SubmittableExtrinsic<"promise">>((resolve) => {
-                        this.craftRequestTx(vaultId, amount).then((tx) => resolve(tx));
+                        this.craftRequestTx(
+                            decodeVaultId(this.api, vaultId),
+                            amount
+                        ).then((tx) => resolve(tx));
                     })
             )
         );
@@ -342,34 +328,12 @@ export class DefaultIssueAPI extends DefaultTransactionAPI implements IssueAPI {
         const issueRequests = await this.api.query.issue.issueRequests.entriesAt(head);
         return await Promise.all(
             issueRequests
-                .filter(([_, req]) => req.isSome.valueOf)
+                .filter(([_, req]) => req.isSome.valueOf())
                 // Can be unwrapped because the filter removes `None` values
                 .map(([id, req]) =>
                     parseIssueRequest(this.vaultsAPI, req.unwrap(), this.btcNetwork, storageKeyToNthInner(id))
                 )
         );
-    }
-
-    async mapForUser(account: AccountId): Promise<Map<H256, Issue>> {
-        const issueRequestPairs: [H256, IssueRequest][] = await this.api.rpc.issue.getIssueRequests(account);
-        const mapForUser: Map<H256, Issue> = new Map<H256, Issue>();
-        await Promise.all(
-            issueRequestPairs.map(
-                (issueRequestPair) =>
-                    new Promise<void>((resolve) => {
-                        parseIssueRequest(
-                            this.vaultsAPI,
-                            issueRequestPair[1],
-                            this.btcNetwork,
-                            issueRequestPair[0]
-                        ).then((issueRequest) => {
-                            mapForUser.set(issueRequestPair[0], issueRequest);
-                            resolve();
-                        });
-                    })
-            )
-        );
-        return mapForUser;
     }
 
     async getGriefingCollateral<C extends CollateralUnit>(
@@ -401,7 +365,7 @@ export class DefaultIssueAPI extends DefaultTransactionAPI implements IssueAPI {
         const head = await this.api.rpc.chain.getFinalizedHead();
         const issueRequestData = await Promise.all(
             issueIds.map(
-                async (issueId): Promise<[Option<IssueRequest>, H256 | string]> =>
+                async (issueId): Promise<[Option<InterbtcPrimitivesIssueIssueRequest>, H256 | string]> =>
                     new Promise((resolve, reject) => {
                         this.api.query.issue.issueRequests
                             .at(head, ensureHashEncoded(this.api, issueId))
@@ -417,60 +381,5 @@ export class DefaultIssueAPI extends DefaultTransactionAPI implements IssueAPI {
                     parseIssueRequest(this.vaultsAPI, issueRequest.unwrap(), this.btcNetwork, issueId)
                 )
         );
-    }
-
-    async subscribeToIssueExpiry(account: AccountId, callback: (requestIssueId: H256) => void): Promise<() => void> {
-        const issuePeriod = await this.getIssuePeriod();
-        const unsubscribe = this.onIssue(
-            account,
-            (seen: Set<H256>, request: Issue, id: H256, currentBlockNumber: BN) => {
-                if (
-                    currentBlockNumber.gtn(request.creationBlock + issuePeriod) &&
-                    !seen.has(id) &&
-                    request.status === IssueStatus.PendingWithBtcTxNotFound
-                ) {
-                    seen.add(id);
-                    callback(id);
-                }
-            }
-        );
-        return unsubscribe;
-    }
-
-    async onIssue(
-        account: AccountId,
-        fn: (set: Set<H256>, request: Issue, id: H256, blockNumber: BN) => void
-    ): Promise<() => void> {
-        const seen = new Set<H256>();
-        try {
-            const unsubscribe = await this.api.rpc.chain.subscribeFinalizedHeads(async (header: Header) => {
-                const issueRequests = await this.mapForUser(account);
-                issueRequests.forEach((request, id) => {
-                    fn(seen, request, id, header.number.toBn());
-                });
-            });
-            return unsubscribe;
-        } catch (error) {
-            return Promise.reject(new Error(`Error onIssue: ${error}`));
-        }
-    }
-
-    async mapIssueRequests(vaultId: AccountId): Promise<Map<H256, Issue>> {
-        try {
-            const issueRequestPairs: [H256, IssueRequest][] = await this.api.rpc.issue.getVaultIssueRequests(vaultId);
-            const requests = await Promise.all(
-                issueRequestPairs.map(
-                    ([id, req]) =>
-                        new Promise<[H256, Issue]>((resolve) => {
-                            parseIssueRequest(this.vaultsAPI, req, this.btcNetwork, id).then((issueRequest) => {
-                                resolve([id, issueRequest]);
-                            });
-                        })
-                )
-            );
-            return new Map(requests);
-        } catch (err) {
-            return Promise.reject(new Error(`Error during issue request retrieval: ${err}`));
-        }
     }
 }

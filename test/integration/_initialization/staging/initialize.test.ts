@@ -26,7 +26,6 @@ import {
     newVaultId,
     CollateralCurrency,
     WrappedCurrency,
-    tickerToCurrencyIdLiteral,
     tickerToMonetaryCurrency,
 } from "../../../../src";
 import { DefaultElectrsAPI } from "../../../../src/external/electrs";
@@ -63,7 +62,7 @@ import {
 import { DefaultTokensAPI } from "../../../../src/parachain/tokens";
 import { sleep, SLEEP_TIME_MS } from "../../../utils/helpers";
 
-describe.only("Initialize parachain state", () => {
+describe("Initialize parachain state", () => {
     let api: ApiPromise;
     let issueAPI: IssueAPI;
     let redeemAPI: RedeemAPI;
@@ -98,7 +97,7 @@ describe.only("Initialize parachain state", () => {
             try {
                 await api.get(accountId, collateralCurrency);
                 return;
-            } catch (_) { }
+            } catch (e) { console.log(e); }
             await sleep(SLEEP_TIME_MS);
         }
     }
@@ -153,7 +152,7 @@ describe.only("Initialize parachain state", () => {
         api.disconnect();
     });
 
-    it.only("should set the stable confirmations and ready the BTC-Relay", async () => {
+    it("should set the stable confirmations and ready the BTC-Relay", async () => {
         const previousIssueApiAccount = issueAPI.getAccount();
         issueAPI.setAccount(sudoAccount);
         // Speed up the process by only requiring 0 parachain and 0 bitcoin confirmations
@@ -177,7 +176,7 @@ describe.only("Initialize parachain state", () => {
         }
     });
 
-    it.only("should set the exchange rate", async () => {
+    it("should set the exchange rate", async () => {
         async function setCollateralExchangeRate<C extends CollateralUnit>(value: Big, currency: Currency<C>) {
             const exchangeRate = new ExchangeRate<Bitcoin, BitcoinUnit, typeof currency, typeof currency.units>(Bitcoin, currency, value);
             // result will be medianized

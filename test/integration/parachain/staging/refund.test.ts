@@ -1,6 +1,7 @@
 import { ApiPromise, Keyring } from "@polkadot/api";
 import * as bitcoinjs from "bitcoinjs-lib";
 import { KeyringPair } from "@polkadot/keyring/types";
+import { InterbtcPrimitivesVaultId } from "@polkadot/types/lookup";
 
 import { ElectrsAPI, DefaultElectrsAPI } from "../../../../src/external/electrs";
 import { BitcoinCoreClient } from "../../../../src/utils/bitcoin-core-client";
@@ -10,7 +11,7 @@ import { DefaultRefundAPI, RefundAPI } from "../../../../src/parachain/refund";
 import { assert } from "../../../chai";
 import { issueSingle } from "../../../../src/utils/issueRedeem";
 import { InterBtc, InterBtcAmount, Polkadot } from "@interlay/monetary-js";
-import { CollateralCurrency, newVaultId, tickerToMonetaryCurrency, VaultId, WrappedCurrency } from "../../../../src";
+import { CollateralCurrency, newVaultId, tickerToMonetaryCurrency, WrappedCurrency } from "../../../../src";
 
 describe("refund", () => {
     let api: ApiPromise;
@@ -20,7 +21,7 @@ describe("refund", () => {
     let keyring: Keyring;
     let userAccount: KeyringPair;
     let vault_3: KeyringPair;
-    let vault_3_id: VaultId;
+    let vault_3_id: InterbtcPrimitivesVaultId;
 
     let nativeCurrency: CollateralCurrency;
     let wrappedCurrency: WrappedCurrency;
@@ -55,16 +56,13 @@ describe("refund", () => {
             electrsAPI,
             bitcoinCoreClient,
             userAccount,
-            InterBtcAmount.from.BTC(0.001),
+            InterBtcAmount.from.BTC(0.00005),
             nativeCurrency,
             vault_3_id,
             false,
             false
         );
-        const refund = await refundAPI.getRequestByIssueId(issueResult.request.id);
-        // The parachain returns an Option<> refund request if none was found,
-        // which is deserialized as a refund request with blank/default fields
-        assert.equal(refund.amountBtc.toString(), "0");
+        assert.isRejected(refundAPI.getRequestByIssueId(issueResult.request.id));
     }).timeout(1000000);
 
     it("should generate a refund request", async () => {
@@ -73,17 +71,14 @@ describe("refund", () => {
             electrsAPI,
             bitcoinCoreClient,
             userAccount,
-            InterBtcAmount.from.BTC(0.001),
+            InterBtcAmount.from.BTC(0.00005),
             nativeCurrency,
             vault_3_id,
             true,
             true
         );
         const refund = await refundAPI.getRequestByIssueId(issueResult.request.id);
-        const refundId = await refundAPI.getRequestIdByIssueId(issueResult.request.id);
-        const refundClone = await refundAPI.getRequestById(refundId);
         assert.notEqual(refund.amountBtc.toString(), "0");
-        assert.equal(refund.amountBtc.toString(), refundClone.amountBtc.toString());
     }).timeout(1000000);
 
     it("should list a single refund request", async () => {

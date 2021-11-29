@@ -17,8 +17,8 @@ import {
     Interlay,
 } from "@interlay/monetary-js";
 import { ApiPromise } from "@polkadot/api";
+import { InterbtcPrimitivesCurrencyId } from "@polkadot/types/lookup";
 import { newCurrencyId } from "..";
-import { CurrencyId } from "../interfaces";
 
 export enum CurrencyIdLiteral {
     DOT = "DOT",
@@ -78,7 +78,7 @@ export function tickerToCurrencyIdLiteral(ticker: string): CurrencyIdLiteral {
     throw new Error("No CurrencyId entry for provided ticker");
 }
 
-export function currencyIdToMonetaryCurrency<U extends CurrencyUnit>(currencyId: CurrencyId): Currency<U> {
+export function currencyIdToMonetaryCurrency<U extends CurrencyUnit>(currencyId: InterbtcPrimitivesCurrencyId): Currency<U> {
     if (currencyId.isInterbtc) {
         return InterBtc as unknown as Currency<U>;
     } else if (currencyId.isDot) {
@@ -95,7 +95,7 @@ export function currencyIdToMonetaryCurrency<U extends CurrencyUnit>(currencyId:
     throw new Error("No CurrencyId entry for provided ticker");
 }
 
-export function currencyIdToLiteral(currencyId: CurrencyId): CurrencyIdLiteral {
+export function currencyIdToLiteral(currencyId: InterbtcPrimitivesCurrencyId): CurrencyIdLiteral {
     return tickerToCurrencyIdLiteral(currencyIdToMonetaryCurrency(currencyId).ticker);
 }
 

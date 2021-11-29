@@ -29,6 +29,7 @@ import { DefaultElectrsAPI, ElectrsAPI } from "../external";
 import { KeyringPair } from "@polkadot/keyring/types";
 import * as bitcoinjs from "bitcoinjs-lib";
 import { cryptoWaitReady } from "@polkadot/util-crypto";
+import { InterbtcPrimitivesVaultId } from "@polkadot/types/lookup";
 
 import {
     BITCOIN_CORE_HOST,
@@ -45,8 +46,8 @@ import {
     USER_1_URI,
     VAULT_1_URI,
 } from "../../test/config";
-import { CollateralCurrency, CollateralUnit, WrappedCurrency, WrappedIdLiteral } from "../types";
-import { newAccountId, newVaultId, VaultId } from "..";
+import { CollateralCurrency, CollateralUnit, WrappedCurrency } from "../types";
+import { newVaultId } from "..";
 
 // Command line arguments of the initialization script
 const yargs = require("yargs/yargs");
@@ -193,7 +194,7 @@ export async function initializeIssue(
     issuingAccount: KeyringPair,
     amountToIssue: MonetaryAmount<WrappedCurrency, BitcoinUnit>,
     nativeCurrency: CollateralCurrency,
-    vaultAccountId: VaultId
+    vaultAccountId: InterbtcPrimitivesVaultId
 ): Promise<void> {
     console.log("Initializing an issue...");
     await issueSingle(

@@ -1,0 +1,952 @@
+Attaching to interbtc-api_oracle_1, interbtc-api_vault_3_1, interbtc-api_faucet_1, interbtc-api_bitcoind_1, interbtc-api_vault_1_1, interbtc-api_bitcoin-cli_1, interbtc-api_vault_to_ban_1, interbtc-api_interbtc_1, interbtc-api_vault_2_1, interbtc-api_electrs_1, interbtc-api_vault_to_liquidate_1, interbtc-api_postgres_1
+[36mbitcoin-cli_1         |[0m 
+[33mbitcoind_1            |[0m /entrypoint.sh: assuming arguments for bitcoind
+[35mfaucet_1              |[0m [2021-11-11T17:05:02Z INFO  runtime::conn] Connecting to the btc-parachain...
+[36;1moracle_1              |[0m [2021-11-11T17:05:02Z INFO  runtime::conn] Connecting to the btc-parachain...
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 It isn't safe to expose RPC publicly without a proxy server that filters available set of RPC methods.    
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 It isn't safe to expose RPC publicly without a proxy server that filters available set of RPC methods.    
+[33mbitcoind_1            |[0m /entrypoint.sh: setting data directory to /home/bitcoin/.bitcoin
+[33mbitcoind_1            |[0m 
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Bitcoin Core version v0.20.1 (release build)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Validating signatures for all blocks.
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using the 'sse4(1way),sse41(4way),avx2(8way)' SHA256 implementation
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using RdSeed as additional entropy source
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using RdRand as an additional entropy source
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Default data directory /home/bitcoin/.bitcoin
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using data directory /home/bitcoin/.bitcoin/regtest
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Config file: /home/bitcoin/.bitcoin/bitcoin.conf (not found, skipping)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Command-line arg: datadir="/home/bitcoin/.bitcoin"
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Command-line arg: fallbackfee="0.0002"
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 Running in --dev mode, RPC CORS has been disabled.    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Command-line arg: regtest=""
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Command-line arg: rpcallowip="0.0.0.0/0"
+[32;1mvault_1_1             |[0m Sleeping...
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 interBTC Parachain    
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 ✌️  version 1.2.0-68105119-x86_64-linux-gnu    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Command-line arg: rpcbind=****
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Command-line arg: rpcpassword=****
+[34;1mvault_3_1             |[0m Sleeping...
+[35;1mvault_2_1             |[0m Sleeping...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Command-line arg: rpcuser=****
+[36mvault_to_ban_1        |[0m Sleeping...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Command-line arg: server=""
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 ❤️  by Interlay Ltd, 2017-2021    
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 📋 Chain specification: interBTC    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using at most 125 automatic connections (1048576 file descriptors available)
+[33mvault_to_liquidate_1  |[0m Sleeping...
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 🏷 Node name: towering-pig-6105    
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 👤 Role: AUTHORITY    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using 16 MiB out of 32/2 requested for signature cache, able to store 524288 elements
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 💾 Database: RocksDb at /root/.local/share/interbtc-standalone/chains/dev_testnet/db/full    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using 16 MiB out of 32/2 requested for script execution cache, able to store 524288 elements
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Script verification uses 11 additional threads
+[34minterbtc_1            |[0m 2021-11-11 17:05:03 ⛓  Native runtime: interbtc-standalone-1 (interbtc-standalone-1.tx1.au1)    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z WARNING: the RPC server is not safe to expose to untrusted networks such as the public internet
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z HTTP: creating work queue of depth 16
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Config options rpcuser and rpcpassword will soon be deprecated. Locally-run instances may remove rpcuser to use cookie-based auth, or may be replaced with rpcauth. Please see share/rpcauth for rpcauth auth generation.
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z HTTP: starting 4 worker threads
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using wallet directory /home/bitcoin/.bitcoin/regtest/wallets
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z init message: Verifying wallet(s)...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z scheduler thread start
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z init message: Loading banlist...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z ERROR: DeserializeFileDB: Failed to open file /home/bitcoin/.bitcoin/regtest/banlist.dat
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Invalid or missing banlist.dat; recreating
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using /16 prefix for IP bucketing
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Cache configuration:
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z * Using 2.0 MiB for block index database
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z * Using 8.0 MiB for chain state database
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z * Using 440.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z init message: Loading block index...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Opening LevelDB in /home/bitcoin/.bitcoin/regtest/blocks/index
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Opened LevelDB successfully
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using obfuscation key for /home/bitcoin/.bitcoin/regtest/blocks/index: 0000000000000000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z LoadBlockIndexDB: last block file = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Checking all blk files are present...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Initializing databases...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Pre-allocating up to position 0x1000000 in blk00000.dat
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Opening LevelDB in /home/bitcoin/.bitcoin/regtest/chainstate
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Opened LevelDB successfully
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Wrote new obfuscate key for /home/bitcoin/.bitcoin/regtest/chainstate: d3c73676cb73e053
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Using obfuscation key for /home/bitcoin/.bitcoin/regtest/chainstate: d3c73676cb73e053
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z init message: Rewinding blocks...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z  block index               5ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/db.log
+[32melectrs_1             |[0m Config { log: StdErrLog { verbosity: Trace, quiet: false, show_level: true, timestamp: Off, modules: [], writer: "stderr", color_choice: Never }, network_type: Regtest, db_path: "./db/regtest", daemon_dir: "/root/.bitcoin/regtest", blocks_dir: "/root/.bitcoin/regtest/blocks", daemon_rpc_addr: 192.168.80.4:18443, cookie: Some("rpcuser:rpcpassword"), electrum_rpc_addr: 127.0.0.1:60401, http_addr: [::]:3002, http_socket_file: None, monitoring_addr: 127.0.0.1:24224, jsonrpc_import: true, light_mode: false, address_search: false, index_unspendables: true, cors: Some("*"), precache_scripts: None, utxos_limit: 500, electrum_txs_limit: 500, electrum_banner: "Welcome to electrs-esplora 0.4.1" }
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z [default wallet] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z [default wallet] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[32melectrs_1             |[0m DEBUG - Server listening on 127.0.0.1:24224
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z [default wallet] Performing wallet upgrade to 169900
+[32melectrs_1             |[0m DEBUG - Running accept thread
+[32melectrs_1             |[0m WARN - reconnecting to bitcoind: {"code":-28,"message":"Loading wallet..."}
+[33;1mpostgres_1            |[0m The files belonging to this database system will be owned by user "postgres".
+[33;1mpostgres_1            |[0m This user must also own the server process.
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m The database cluster will be initialized with locale "en_US.utf8".
+[33;1mpostgres_1            |[0m The default database encoding has accordingly been set to "UTF8".
+[33;1mpostgres_1            |[0m The default text search configuration will be set to "english".
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m Data page checksums are disabled.
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m fixing permissions on existing directory /var/lib/postgresql/data ... ok
+[33;1mpostgres_1            |[0m creating subdirectories ... ok
+[33;1mpostgres_1            |[0m selecting dynamic shared memory implementation ... posix
+[33;1mpostgres_1            |[0m selecting default max_connections ... 100
+[33;1mpostgres_1            |[0m selecting default shared_buffers ... 128MB
+[33;1mpostgres_1            |[0m selecting default time zone ... Etc/UTC
+[33;1mpostgres_1            |[0m creating configuration files ... ok
+[33;1mpostgres_1            |[0m running bootstrap script ... ok
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z [default wallet] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z [default wallet] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z [default wallet] Wallet completed loading in             916ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z [default wallet] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z [default wallet] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z [default wallet] m_address_book.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z UpdateTip: new best=0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206 height=0 version=0x00000001 log2_work=1 tx=1 date='2011-02-02T23:16:42Z' progress=1.000000 cache=0.0MiB(0txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z block tree size = 1
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z nBestHeight = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Failed to open mempool file from disk. Continuing anyway.
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z torcontrol thread start
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Bound to [::]:18444
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Bound to 0.0.0.0:18444
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z init message: Loading P2P addresses...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z ERROR: DeserializeFileDB: Failed to open file /home/bitcoin/.bitcoin/regtest/peers.dat
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z Invalid or missing peers.dat; recreating
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z init message: Starting network threads...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z net thread start
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z dnsseed thread start
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z addcon thread start
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z 0 addresses found from DNS seeds
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z dnsseed thread exit
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z msghand thread start
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z init message: Done loading
+[33mbitcoind_1            |[0m 2021-11-11T17:05:03Z opencon thread start
+[33;1mpostgres_1            |[0m performing post-bootstrap initialization ... ok
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/Alice
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Alice/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Alice/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Alice/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Alice/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Alice] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Alice] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Alice] Performing wallet upgrade to 169900
+[33;1mpostgres_1            |[0m syncing data to disk ... ok
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m Success. You can now start the database server using:
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m     pg_ctl -D /var/lib/postgresql/data -l logfile start
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m initdb: warning: enabling "trust" authentication for local connections
+[33;1mpostgres_1            |[0m You can change this by editing pg_hba.conf or using the option -A, or
+[33;1mpostgres_1            |[0m --auth-local and --auth-host, the next time you run initdb.
+[33;1mpostgres_1            |[0m waiting for server to start....2021-11-11 17:05:04.208 UTC [48] LOG:  starting PostgreSQL 13.4 (Debian 13.4-4.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.209 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.211 UTC [49] LOG:  database system was shut down at 2021-11-11 17:05:04 UTC
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.214 UTC [48] LOG:  database system is ready to accept connections
+[33;1mpostgres_1            |[0m  done
+[33;1mpostgres_1            |[0m server started
+[33;1mpostgres_1            |[0m CREATE DATABASE
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.409 UTC [48] LOG:  received fast shutdown request
+[33;1mpostgres_1            |[0m waiting for server to shut down....2021-11-11 17:05:04.410 UTC [48] LOG:  aborting any active transactions
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.411 UTC [48] LOG:  background worker "logical replication launcher" (PID 55) exited with exit code 1
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.411 UTC [50] LOG:  shutting down
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.421 UTC [48] LOG:  database system is shut down
+[33;1mpostgres_1            |[0m  done
+[33;1mpostgres_1            |[0m server stopped
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m PostgreSQL init process complete; ready for start up.
+[33;1mpostgres_1            |[0m 
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.522 UTC [1] LOG:  starting PostgreSQL 13.4 (Debian 13.4-4.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.522 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.522 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.524 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.526 UTC [62] LOG:  database system was shut down at 2021-11-11 17:05:04 UTC
+[33;1mpostgres_1            |[0m 2021-11-11 17:05:04.529 UTC [1] LOG:  database system is ready to accept connections
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Alice] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Alice] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Alice] Wallet completed loading in             804ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Alice] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Alice] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Alice] m_address_book.size() = 0
+[36mbitcoin-cli_1         |[0m {
+[36mbitcoin-cli_1         |[0m   "name": "Alice",
+[36mbitcoin-cli_1         |[0m   "warning": ""
+[36mbitcoin-cli_1         |[0m }
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/Bob
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Bob/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Bob/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Bob/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Bob/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Bob] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Bob] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:04Z [Bob] Performing wallet upgrade to 169900
+[34minterbtc_1            |[0m 2021-11-11 17:05:05 🔨 Initializing Genesis block/state (state: 0x6a73…097a, header-hash: 0x4775…32aa)    
+[34minterbtc_1            |[0m 2021-11-11 17:05:05 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z [Bob] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z [Bob] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z [Bob] Wallet completed loading in             725ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z [Bob] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z [Bob] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z [Bob] m_address_book.size() = 0
+[36mbitcoin-cli_1         |[0m {
+[36mbitcoin-cli_1         |[0m   "name": "Bob",
+[36mbitcoin-cli_1         |[0m   "warning": ""
+[36mbitcoin-cli_1         |[0m }
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/Charlie
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Charlie/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Charlie/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Charlie/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Charlie/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z [Charlie] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z [Charlie] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:05Z [Charlie] Performing wallet upgrade to 169900
+[32melectrs_1             |[0m INFO - NetworkInfo { version: 200100, subversion: "/Satoshi:0.20.1/", relayfee: 0.00001 }
+[32melectrs_1             |[0m INFO - BlockchainInfo { chain: "regtest", blocks: 0, headers: 0, bestblockhash: "0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206", pruned: false, verificationprogress: 1.0, initialblockdownload: Some(true) }
+[32melectrs_1             |[0m WARN - waiting for bitcoind sync to finish: 0/0 blocks, verification progress: 100.000%
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z [Charlie] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z [Charlie] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z [Charlie] Wallet completed loading in            1132ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z [Charlie] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z [Charlie] mapWallet.size() = 0
+[36mbitcoin-cli_1         |[0m {
+[36mbitcoin-cli_1         |[0m   "name": "Charlie",
+[36mbitcoin-cli_1         |[0m   "warning": ""
+[36mbitcoin-cli_1         |[0m }
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z [Charlie] m_address_book.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/Dave
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Dave/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Dave/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Dave/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Dave/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z [Dave] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z [Dave] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:06Z [Dave] Performing wallet upgrade to 169900
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z [Dave] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z [Dave] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z [Dave] Wallet completed loading in            1266ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z [Dave] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z [Dave] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z [Dave] m_address_book.size() = 0
+[36mbitcoin-cli_1         |[0m {
+[36mbitcoin-cli_1         |[0m   "name": "Dave",
+[36mbitcoin-cli_1         |[0m   "warning": ""
+[36mbitcoin-cli_1         |[0m }
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/Eve
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Eve/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Eve/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Eve/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Eve/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z [Eve] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z [Eve] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:08Z [Eve] Performing wallet upgrade to 169900
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z [Eve] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z [Eve] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z [Eve] Wallet completed loading in            1248ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z [Eve] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z [Eve] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z [Eve] m_address_book.size() = 0
+[36mbitcoin-cli_1         |[0m {
+[36mbitcoin-cli_1         |[0m   "name": "Eve",
+[36mbitcoin-cli_1         |[0m   "warning": ""
+[36mbitcoin-cli_1         |[0m }
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/Ferdie
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Ferdie/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Ferdie/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/Ferdie/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/Ferdie/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z [Ferdie] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z [Ferdie] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:09Z [Ferdie] Performing wallet upgrade to 169900
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Ferdie] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Ferdie] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Ferdie] Wallet completed loading in            1285ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Ferdie] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Ferdie] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Ferdie] m_address_book.size() = 0
+[36mbitcoin-cli_1         |[0m {
+[36mbitcoin-cli_1         |[0m   "name": "Ferdie",
+[36mbitcoin-cli_1         |[0m   "warning": ""
+[36mbitcoin-cli_1         |[0m }
+[36mbitcoin-cli_1         |[0m error code: -4
+[36mbitcoin-cli_1         |[0m error message:
+[36mbitcoin-cli_1         |[0m Wallet file verification failed: Error loading wallet Alice. Duplicate -wallet filename specified.
+[36mbitcoin-cli_1         |[0m error code: -4
+[36mbitcoin-cli_1         |[0m error message:
+[36mbitcoin-cli_1         |[0m Wallet file verification failed: Error loading wallet Bob. Duplicate -wallet filename specified.
+[36mbitcoin-cli_1         |[0m error code: -4
+[36mbitcoin-cli_1         |[0m error message:
+[36mbitcoin-cli_1         |[0m Wallet file verification failed: Error loading wallet Charlie. Duplicate -wallet filename specified.
+[36mbitcoin-cli_1         |[0m error code: -4
+[36mbitcoin-cli_1         |[0m error message:
+[36mbitcoin-cli_1         |[0m Wallet file verification failed: Error loading wallet Dave. Duplicate -wallet filename specified.
+[36mbitcoin-cli_1         |[0m error code: -4
+[36mbitcoin-cli_1         |[0m error message:
+[36mbitcoin-cli_1         |[0m Wallet file verification failed: Error loading wallet Eve. Duplicate -wallet filename specified.
+[36mbitcoin-cli_1         |[0m error code: -4
+[36mbitcoin-cli_1         |[0m error message:
+[36mbitcoin-cli_1         |[0m Wallet file verification failed: Error loading wallet Ferdie. Duplicate -wallet filename specified.
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] keypool reserve 1
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] keypool keep 1
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z Pre-allocating up to position 0x100000 in rev00000.dat
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z Leaving InitialBlockDownload (latching to false)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=2c6bb17b25b52251aa243d9529be4cb384aefda583c898e04862479da25cbc4d height=1 version=0x20000000 log2_work=2 tx=2 date='2021-11-11T17:05:10Z' progress=1.000000 cache=0.0MiB(1txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=0efa172eb60c5af8c50cc5ee7d91eedbd2e616a85a26597f7fd116aec58ec7b6 height=2 version=0x20000000 log2_work=2.5849625 tx=3 date='2021-11-11T17:05:11Z' progress=1.000000 cache=0.0MiB(2txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet f44a62b267a3bf4daabd663abc061854f07b1519e07fcf72c62263677cc5d362  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=328976f09405144a395a7395af2f1d6aff76eeb1326d80bfd2815421a03f3a6a height=3 version=0x20000000 log2_work=3 tx=4 date='2021-11-11T17:05:11Z' progress=1.000000 cache=0.0MiB(3txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 64728c39c01743f05dd571afcfd1339916819e4801dc9c907a1a34e069cafb76  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=6e22a63f558a2e76f1920f34366a231437c03f0de31be79c76c74dbbb1d2ba09 height=4 version=0x20000000 log2_work=3.3219281 tx=5 date='2021-11-11T17:05:12Z' progress=1.000000 cache=0.0MiB(4txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=7d9e4c92fbf514a7dd28644cd7b85e0060a4da20d307569b378554ecd05cc57b height=5 version=0x20000000 log2_work=3.5849625 tx=6 date='2021-11-11T17:05:12Z' progress=1.000000 cache=0.0MiB(5txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 2ca9a282cc761823db5e628010998040573a4eb11ab330ec5ee710d431d892ba  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=12e0d9a3bbf349d72e91740d6195a7ccb7b9784dcc23cbc002b48e615b80fc4c height=6 version=0x20000000 log2_work=3.8073549 tx=7 date='2021-11-11T17:05:12Z' progress=1.000000 cache=0.0MiB(6txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=3efbb8795b21f08ec88d832b979d99d266d6fc8a84532024719cc15bc09681cc height=7 version=0x20000000 log2_work=4 tx=8 date='2021-11-11T17:05:12Z' progress=1.000000 cache=0.0MiB(7txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=35ba7467f29f93a6b30aa882f5dcde655e571396ce18dd7d4fd9d199b6dc780f height=8 version=0x20000000 log2_work=4.169925 tx=9 date='2021-11-11T17:05:13Z' progress=1.000000 cache=0.0MiB(8txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet a24f6244c27e049713cc22972ff17e89be5189baa432fb566f5230bd6e631729  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=4f8dd8c7177f60958ace09cfef74a89b5b67e7030da7b3dd69174a2040df83a1 height=9 version=0x20000000 log2_work=4.3219281 tx=10 date='2021-11-11T17:05:13Z' progress=1.000000 cache=0.0MiB(9txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet f7f9dbd9938be3ff027739062195f1852b33caf4276181242b029c626db0412d  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 411cbac0e4b569c8f723ada86ba734fba9d31b5deb862d313229b3f0e7482773  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet c9865c57f8cf87f0590200fd0ab7ed817b3ce7bbaaa2f33a32a66aa83e9a7a1f  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet f7dc1a834835f5fd5dfe09e103299d65cc6d0741f7ee8bc724e134262c8ab455  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet c139485e5696a24f23a528450c3d64916432c1ffd826c14e31c0cb9be9488c25  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=3bed14b7e3d9c0f7184046448e754f44c1001a326355f95efd62d99c91e2693e height=10 version=0x20000000 log2_work=4.4594316 tx=11 date='2021-11-11T17:05:13Z' progress=1.000000 cache=0.0MiB(10txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 580e431dc29468a1d36d07c997a462c28fed17e12f5d1389b8c2314d14943e78  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=08cdd6e21f777e3544dc8b7cae98b0f9f639c894b5aaa8260abf2b4af917d48d height=11 version=0x20000000 log2_work=4.5849625 tx=12 date='2021-11-11T17:05:13Z' progress=1.000000 cache=0.0MiB(11txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=23ffe704aa5e0e704af7d66097dad67527832b6d5baba4fa5dbb37a62c20ff00 height=12 version=0x20000000 log2_work=4.7004397 tx=13 date='2021-11-11T17:05:13Z' progress=1.000000 cache=0.0MiB(12txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 3d42d08505538f5dcffc5cf82a184e61acbaa8a215171928373659583a147976  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=455f0d42b72309cd494eba43eec182e4d7f648755281eab976c367cac92d6184 height=13 version=0x20000000 log2_work=4.8073549 tx=14 date='2021-11-11T17:05:13Z' progress=1.000000 cache=0.0MiB(13txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=496917672a06a47b0857fd6ddce1a0f5120345fd644347bbae6b6641a73cbc45 height=14 version=0x20000000 log2_work=4.9068906 tx=15 date='2021-11-11T17:05:14Z' progress=1.000000 cache=0.0MiB(14txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=35a15258bba08f306bc702eef64ab6d4dff9fb55de80282c5f2f922fe9992bc0 height=15 version=0x20000000 log2_work=5 tx=16 date='2021-11-11T17:05:14Z' progress=1.000000 cache=0.0MiB(15txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=45bdc91fd13d5e0bcc663190b15cb53d194f63a4484e8d29c921a412907f75d5 height=16 version=0x20000000 log2_work=5.0874628 tx=17 date='2021-11-11T17:05:14Z' progress=1.000000 cache=0.0MiB(16txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 5b86b8f7b1b0ddaeab219659c0a658777ece4ecbe5e1bc028cc1b0e012b0aaf1  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=16e321bace22c0f8fbe2fb37f066b5b7d584829f36311511224c15ac5ef0aab7 height=17 version=0x20000000 log2_work=5.169925 tx=18 date='2021-11-11T17:05:14Z' progress=1.000000 cache=0.0MiB(17txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 003db5f228327a3a78f5138092a1d827847e64fd83b5029b508a5d2736591d6c  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=1a1c1f059fabc71c3353aed3234787f64d4c115faca8cec2e4b09ed252ade4b5 height=18 version=0x20000000 log2_work=5.2479275 tx=19 date='2021-11-11T17:05:14Z' progress=1.000000 cache=0.0MiB(18txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=4401fe339f5c7c963f57cd92d232ee8c50d7e6745abff90a0c17adbe8bc3ee90 height=19 version=0x20000000 log2_work=5.3219281 tx=20 date='2021-11-11T17:05:14Z' progress=1.000000 cache=0.0MiB(19txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 96d6e83d3e91930b95bf99228484160f658e1ae688d2109187ac88e2c63894f0  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet a24ef74a90b9404ae93c7849b2242962e26dc2727a5e983f07613f98d3c49fc9  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet e805702cf593cb45e98ddf3470d584c361c95dc0c9847d3ae42c75477a18aa9d  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 5113e0dc3fd31565a3f6975e61ee7e44b5666917b4945cd1c167240ff10e10ef  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 94eb36fa817e2581cbe031fc82b31f197e8d6bc3cb70e13748aafc638051f26a  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 5944798a118ce9ead3513a962ff1a6e5acc15bffd2eab1a66c52bb361615da1a  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=3c131423501b58684ce12c8b7e7ed477c18ee76e4cc0288f434f9d81c2a30045 height=20 version=0x20000000 log2_work=5.3923174 tx=21 date='2021-11-11T17:05:15Z' progress=1.000000 cache=0.0MiB(20txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 3a50f1a548309052106efb1b93378a0b97a232db59f3d2967fe9dcace7b61845  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=0922d0a4e19181e470c33575c077dca6c5722f64294bfa517e3c6c11a7731b04 height=21 version=0x20000000 log2_work=5.4594316 tx=22 date='2021-11-11T17:05:15Z' progress=1.000000 cache=0.0MiB(21txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=08eb1ba865d21812bcd60faf7a79ab440f22715c74182873bd5e5ea3d0211562 height=22 version=0x20000000 log2_work=5.523562 tx=23 date='2021-11-11T17:05:15Z' progress=1.000000 cache=0.0MiB(22txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 24a28966487afc9c8b8955ffa5e74a0f86ff2affaa1118fbd79b13eb0782e679  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=2b58a279a0d4eec5b0928752af10ae51f173ff04860435edc2bf394e8fbdf720 height=23 version=0x20000000 log2_work=5.5849625 tx=24 date='2021-11-11T17:05:15Z' progress=1.000000 cache=0.0MiB(23txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=18df921279984acbbb40cb4d0832d9eae63913d183ddb10b73c65ee1acb51c81 height=24 version=0x20000000 log2_work=5.6438562 tx=25 date='2021-11-11T17:05:15Z' progress=1.000000 cache=0.0MiB(24txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 65b3bf6651799df9227dd18aa183d24bdcf0e392b2fde530b6cb5d17c5c1eedb  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=34288693bbe74a6110fca223e72ce1e72e009e015f7f0bac40c3671663fba9b9 height=25 version=0x20000000 log2_work=5.7004397 tx=26 date='2021-11-11T17:05:15Z' progress=1.000000 cache=0.0MiB(25txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=60ed05082ce181d77706ff5f4fab0e66525d4f7d97695417d58556eedb0733fc height=26 version=0x20000000 log2_work=5.7548875 tx=27 date='2021-11-11T17:05:16Z' progress=1.000000 cache=0.0MiB(26txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 6b16363f477dfcd52a994a635dab9c5f9ef79d4ed4e26b590d89170fa35d50bf  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=207cf893ece71c7a8a3791429333b1e5919e876ebd85c6a7db6da6c74057fde1 height=27 version=0x20000000 log2_work=5.8073549 tx=28 date='2021-11-11T17:05:16Z' progress=1.000000 cache=0.0MiB(27txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=1ee2da776c9cbbfa0ebf16a5f159dfe9fedf764c36bb1201e8faae1eb80dcce3 height=28 version=0x20000000 log2_work=5.857981 tx=29 date='2021-11-11T17:05:16Z' progress=1.000000 cache=0.0MiB(28txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 013450a37536fb26b140f4f1cd3058b13f6124be61687ed8793bfb54ba195a42  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=5ae0707f917d0c631c6745b9f87b91259f4b93d1cf0991e95a704a1da3086fe1 height=29 version=0x20000000 log2_work=5.9068906 tx=30 date='2021-11-11T17:05:16Z' progress=1.000000 cache=0.0MiB(29txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 583bd2f77ac3e29fbb07494755d8bc6e3cf4112d1a3d0906e08c23dbe7c14298  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=6a2bf8d04f1dd4196bccf309f8e9abcdd3f4e9de341962ae9e7f87af5ae7b24b height=30 version=0x20000000 log2_work=5.9541963 tx=31 date='2021-11-11T17:05:16Z' progress=1.000000 cache=0.0MiB(30txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=184eef5f5dc0d1127517c535a16e9b796b55924adf1673f13f9b621ab34e275f height=31 version=0x20000000 log2_work=6 tx=32 date='2021-11-11T17:05:16Z' progress=1.000000 cache=0.0MiB(31txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 3fe1ad25fcbcb707ddaa16c87bed0d9c6ecff35e5def4be9832217c70617dc57  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 1649550f0630834e652123360ee4c1c9c2d12cd51136960b118659b82af901af  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 03a3dc7a54cc06c0c16081a30f52ef102844b97e65054622084e41f44f846ce5  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 8e74bcc5a6c588d940109e88d1ee04948c75ca92c22e10e01b358d79c0a93d1f  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet e48198381f288582dc558438af6e2b2d93c3767bb3c270ba92facb59b1de7414  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 717fb5572182d880300aba2f12acbce29bcfe05b4077d629f2a23520404bbead  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=03a1dfd925e051d454f79ff3f19eecafccddc1dfbbab4e809ffb3ea9508f353d height=32 version=0x20000000 log2_work=6.0443941 tx=33 date='2021-11-11T17:05:17Z' progress=1.000000 cache=0.0MiB(32txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=3b67413bc6934728b4c6a08e280f4cd561fa9191721319a4578e086e88312272 height=33 version=0x20000000 log2_work=6.0874628 tx=34 date='2021-11-11T17:05:17Z' progress=1.000000 cache=0.0MiB(33txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet c89dd2a349da991a216691ddc24879b906764568c5fcb93c99ade1dee2c409ea  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=243934dfe73106ab356f24282d237ce51a96ed333144120bd600c76ee6cc3d53 height=34 version=0x20000000 log2_work=6.129283 tx=35 date='2021-11-11T17:05:17Z' progress=1.000000 cache=0.0MiB(34txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=3aaad885031a2ec38a357a95ab86399b8ea50ef8d2221a178a0de4bd6b24ec5c height=35 version=0x20000000 log2_work=6.169925 tx=36 date='2021-11-11T17:05:17Z' progress=1.000000 cache=0.0MiB(35txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=7ba77f7537c9815442b1dc05bf176792f8a94969c869e601085944d2a90b3cf9 height=36 version=0x20000000 log2_work=6.2094534 tx=37 date='2021-11-11T17:05:17Z' progress=1.000000 cache=0.0MiB(36txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=7d9871a04bae4cefd1fd642ebede00b64426376ab48f61d8cb6be75953e5d06d height=37 version=0x20000000 log2_work=6.2479275 tx=38 date='2021-11-11T17:05:17Z' progress=1.000000 cache=0.0MiB(37txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 8e9609240553b79753eafeaacf76eaf7c9c43affab509264511067153a703c4e  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 6b630c4ebaf36272e899e6170b244ad7310b6945d95946e0277d67a073d91df3  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 55ce0a252cd1186865db2a31aae4093f5041efb877c02b7c0616e58825463872  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet dcdf83c66e26ff5cca72a391ed2461b9a020e9c6957fda0796fab0284ce3c9d9  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet c757b149cd3f1382ee85db54b78e025d4dd70dca1923040857bfa78e7410909c  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=15cdc988bcdbfc111380d9dad34e25d986912675716bcb88dc4f8ad1ff682cca height=38 version=0x20000000 log2_work=6.2854022 tx=39 date='2021-11-11T17:05:18Z' progress=1.000000 cache=0.0MiB(38txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=512a2f435c59087d67c02b1ba8d045407021ba4962a37e40ea2e91e2ddeb0fff height=39 version=0x20000000 log2_work=6.3219281 tx=40 date='2021-11-11T17:05:18Z' progress=1.000000 cache=0.0MiB(39txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet efa50065865a930b870b53c2d46a7d201b6079bd80221233d358373ca7ce8508  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=3a04a3b69e2ee09490f38748655dbdbae26d55dd78b86d273c30c1046a83a318 height=40 version=0x20000000 log2_work=6.357552 tx=41 date='2021-11-11T17:05:18Z' progress=1.000000 cache=0.0MiB(40txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=079d5dee007a4af8d780b41cdf45c14b5fd510384497f72dbdcd53ba7bc00949 height=41 version=0x20000000 log2_work=6.3923174 tx=42 date='2021-11-11T17:05:18Z' progress=1.000000 cache=0.0MiB(41txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet b4abe3d41bb3181603724926eb8b048dd77bcc3b567a217f41bf204baad632fe  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=2edc171aedcf499e5630af972cbd72de39abcb3d6c50bdec522a69d4b909d17f height=42 version=0x20000000 log2_work=6.4262648 tx=43 date='2021-11-11T17:05:18Z' progress=1.000000 cache=0.0MiB(42txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=2b51e6107c53a67123230d2f6fe7addf4b0e1c88b43dec54e7c4f023970bf389 height=43 version=0x20000000 log2_work=6.4594316 tx=44 date='2021-11-11T17:05:18Z' progress=1.000000 cache=0.0MiB(43txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet d55e4212484509c847edd25e86445ea72f72a83630175423488fcb9ffb3c1acd  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=2511d7e50e4de7a79ce466d4d00f8bf301ff56048db7973fc58f10f97322650a height=44 version=0x20000000 log2_work=6.4918531 tx=45 date='2021-11-11T17:05:19Z' progress=1.000000 cache=0.0MiB(44txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=103b24fe3c2c8775590158469e911ef28a6c1fae0c0f4e38ec3e56aa2ea59e6e height=45 version=0x20000000 log2_work=6.523562 tx=46 date='2021-11-11T17:05:19Z' progress=1.000000 cache=0.0MiB(45txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet a1f30e8d279a815d76c880d6e816fc951a3dc17c96f31a404360e962726606b7  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=7be8686355e52d15d0cae28138e05f326f867acaaa518b1ae6aecd6df87ce0c8 height=46 version=0x20000000 log2_work=6.5545889 tx=47 date='2021-11-11T17:05:19Z' progress=1.000000 cache=0.0MiB(46txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 2146c20d4e2d71ad9270a1ec1970ecadcb9e010023c517bc053f5dde8cd460dc  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 0332e2fb435442590d94a9f2fd7df98206b08c9a8aa48d25fa0434aea9f383e4  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 9522377e3b1944d3ae64f1b29a18d07b43b44591d237478cf2aacad360f75a27  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet f2de811ba015aaaaafd642d5328e5cc7f875192bc78f5df299b1d935c7428420  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 2917a14a99cea622283d0ab5269f29050c33937e700be1ca7ef1daedc44f986d  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=06ca8a635e73ad11db6cff2c74ae3120672a790b9cd7f097449e5e8cc8c08ee6 height=47 version=0x20000000 log2_work=6.5849625 tx=48 date='2021-11-11T17:05:19Z' progress=1.000000 cache=0.0MiB(47txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=22e0fb2ac844c70fab2e46f30522e09aa0fe28657051075ff4e6d0728c0a9481 height=48 version=0x20000000 log2_work=6.6147098 tx=49 date='2021-11-11T17:05:19Z' progress=1.000000 cache=0.0MiB(48txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 7f0320cdaac3d593871ab2d8fa5523af8f330503a7909f4449281a1b58921675  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=224cd0dae8efee98dd4f35c30640aa7855ef94570a7397fa3893d6b0be0f20e9 height=49 version=0x20000000 log2_work=6.6438562 tx=50 date='2021-11-11T17:05:19Z' progress=1.000000 cache=0.0MiB(49txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=284f9118962471ed0dbfc908beb3c3c009caa53c17092a0a2b0aa1ec3707b24b height=50 version=0x20000000 log2_work=6.6724253 tx=51 date='2021-11-11T17:05:20Z' progress=1.000000 cache=0.0MiB(50txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 95bdd6bbf1b6156dcc16dace77a961f5e73a3c19ed997d5fafcb33b6e9729bbd  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=06b23454dee028277b3249b91f1dc872c5104985ff03d6fde260bc2bf9576e86 height=51 version=0x20000000 log2_work=6.7004397 tx=52 date='2021-11-11T17:05:20Z' progress=1.000000 cache=0.0MiB(51txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=7cdf81e36ca1d9f61830d7e086611481c8c2d1a2098f5529b17cd22b092ebd92 height=52 version=0x20000000 log2_work=6.7279205 tx=53 date='2021-11-11T17:05:20Z' progress=1.000000 cache=0.0MiB(52txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 2d15e90cdc715051cf3c22f2e1fb0b4b1f6600bf85cb327a3bca9b4c7cd1b5e7  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=696e29a382fa124ba5100f32612cc17baeafc663994ac956994f442c9206c528 height=53 version=0x20000000 log2_work=6.7548875 tx=54 date='2021-11-11T17:05:20Z' progress=1.000000 cache=0.0MiB(53txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 2a26dd15521a2c7077692f4cda7fb06a1c4b2031a080466b98cc2ae27c05f570  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=50006910557aa62b554eb069760be4641178a47038cc46167ea114060930d4e1 height=54 version=0x20000000 log2_work=6.7813597 tx=55 date='2021-11-11T17:05:20Z' progress=1.000000 cache=0.0MiB(54txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=15b0db3c44e619bccc6efdb2e1b1d139e3d6868ad697e627c5a85ab648cddd40 height=55 version=0x20000000 log2_work=6.8073549 tx=56 date='2021-11-11T17:05:20Z' progress=1.000000 cache=0.0MiB(55txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 3fde79f8af1999cd7865dd64b2196ba3738fc0b17624654f4115a0568a84ebe0  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=53f0c9bf81bd40e42b6f799f65085f19ab6489c50615d9a48d7d172351c4d9a9 height=56 version=0x20000000 log2_work=6.83289 tx=57 date='2021-11-11T17:05:21Z' progress=1.000000 cache=0.0MiB(56txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 6086541feef5400f89da9eae73fd8155c0b78b1194523622453387c546e9ace3  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet e792c4d6ef62ed637dc34fbb2c91ad7810d9015c955202e5cf0df4a25b85bfbe  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 83b52789620b7b32a588971f49a93fcffe80ea0e5799d355817a91b770b9248a  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 7fef6976e9b09d29a6cb5246e44e69a23a29f9c1ab1460e500e18c46413ddd35  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet c47ef14d387406a689c55184f27ddcadba9f8fca415800e0b62890798e3f7836  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=304564c640c65778932465806c7e119689d613bab3d0dd94703ef200c61a03e6 height=57 version=0x20000000 log2_work=6.857981 tx=58 date='2021-11-11T17:05:21Z' progress=1.000000 cache=0.0MiB(57txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=0a6001c3329b33690dec9129e55e5c79a8ef33489aa27aeaf49263451aae8ccb height=58 version=0x20000000 log2_work=6.882643 tx=59 date='2021-11-11T17:05:21Z' progress=1.000000 cache=0.0MiB(58txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet ea42e183ed6fe96baf3470f9ce65e0039b997b148f81dc36a46e72131abe70ce  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=32072257b49ee9424c27cfa18d880062c0fe715f34357c11709222354004574f height=59 version=0x20000000 log2_work=6.9068906 tx=60 date='2021-11-11T17:05:21Z' progress=1.000000 cache=0.0MiB(59txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=6cb7d734a3349433636324d60db2c5a05bc320cd34939b29ad4dad34998225c3 height=60 version=0x20000000 log2_work=6.9307373 tx=61 date='2021-11-11T17:05:21Z' progress=1.000000 cache=0.0MiB(60txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 70e65412928594eb4c849392296a5da177d6da04bd5c59f9e36f2562bc449d60  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=174d0d18705989fc78dff05736a77672ccf51d6a0930c484d16eb430891ae35c height=61 version=0x20000000 log2_work=6.9541963 tx=62 date='2021-11-11T17:05:21Z' progress=1.000000 cache=0.0MiB(61txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet d861591181c58c17866ef3f6a3a4e51c41f4d978dd540caec3b35ca8ec0febf4  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=2b270b658b1945bbb67105bfb06c1cea67285d72ce41368ba851b5e2dcc19916 height=62 version=0x20000000 log2_work=6.9772799 tx=63 date='2021-11-11T17:05:22Z' progress=1.000000 cache=0.0MiB(62txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 22115494ba85eabbd1ecc1437fb4fab914b62e38f77ba05c915bdb098fdab883  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=31c8b14fe571b6f3a508a76e05c5694eaaabd5c40821016761fddb94ea0e8980 height=63 version=0x20000000 log2_work=7 tx=64 date='2021-11-11T17:05:22Z' progress=1.000000 cache=0.0MiB(63txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=31d8212dc74c78230e61ddf40e14b443ec6d454a3e5536701f45fddd982a44d7 height=64 version=0x20000000 log2_work=7.0223678 tx=65 date='2021-11-11T17:05:22Z' progress=1.000000 cache=0.0MiB(64txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 8993c1095be968480ffc8b6badcd751ad1b04a5ed10a5ca774b63b8203a420a6  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=421c05c9073caeaaa99d7f19dbb1e86a6388e14ea73bc7b359709d975a262df1 height=65 version=0x20000000 log2_work=7.0443941 tx=66 date='2021-11-11T17:05:22Z' progress=1.000000 cache=0.0MiB(65txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet fdd7868a414816fa018b99fdd11c30d8e4977df5921139760354a59de90ffe2d  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=1692b6b26bebb9972d0f21dde1443e1d111545de2e0419a415239e6eeafde605 height=66 version=0x20000000 log2_work=7.0660892 tx=67 date='2021-11-11T17:05:22Z' progress=1.000000 cache=0.0MiB(66txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet e57591c087eecc49b5642bb0f09a88ca17478410d387a5bc8ce2557b6cb7b347  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=524e7897f3d07d55153639c641fa5096215269fbbe33e91d56c9d250c1df1a76 height=67 version=0x20000000 log2_work=7.0874628 tx=68 date='2021-11-11T17:05:22Z' progress=1.000000 cache=0.0MiB(67txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 5fd262f0eb8d913f8a7ad2a7fc393acf5acf373642a4718c0891ee66c5268acd  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=11e3308157d9dc1c04c81b101ccaa76c165ca502c3c628d87d22ea21b0bbef28 height=68 version=0x20000000 log2_work=7.1085245 tx=69 date='2021-11-11T17:05:23Z' progress=1.000000 cache=0.0MiB(68txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=14eba5dd81cec56443804b874827c7047dc303556a0c52217021ad384e5573e3 height=69 version=0x20000000 log2_work=7.129283 tx=70 date='2021-11-11T17:05:23Z' progress=1.000000 cache=0.0MiB(69txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet b0ad56d982b18b0f459f81558a919d78ca8b39830ec9b99072b2b3f100338864  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=3a2dee443a6afc9ba5c69ae1b80ee8600f813537caf2437a2842ed56fba3c69a height=70 version=0x20000000 log2_work=7.1497471 tx=71 date='2021-11-11T17:05:23Z' progress=1.000000 cache=0.0MiB(70txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet a0fcb2cc108f1ea6b1d49aeba3b17302bc1dd5f20672e16eefb19a0d36774452  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=27492854833f0e458b5671444b32cb87369aaf316e78437661755035277ee711 height=71 version=0x20000000 log2_work=7.169925 tx=72 date='2021-11-11T17:05:23Z' progress=1.000000 cache=0.0MiB(71txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet e78e4de1016d2a87bcc2ed4c40c74264bd2d98f680d41edf1a1b378fe4364919  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 1598c2ff43f82041d6d926480add60b4c01b8216f4b34be18021d3bc17e3c717  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet b25a00b4e146bc2ea6132e7d74a64bf38a8390cdc4889111898e0701ab47c09a  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 87f6f532238bfc226177a743c8b94b5fa5a57b9f7d364ca099d24330f46ddea2  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 3d9ba9459a3676bc95dc65be1ea61337cc23b517e786e1be72dfb16ebe8b5493  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=0cc98c8a1356f02e970386d6e7f57d1a8b938f2f6729d0f47e5a76c5102bfb9b height=72 version=0x20000000 log2_work=7.1898246 tx=73 date='2021-11-11T17:05:23Z' progress=1.000000 cache=0.0MiB(72txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=594131d3bac6255c4f04024ac947c7b457cc057a714a56babe6189dddf83d8ff height=73 version=0x20000000 log2_work=7.2094534 tx=74 date='2021-11-11T17:05:23Z' progress=1.000000 cache=0.0MiB(73txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 96eb0834410a760277048fca7445fcee741a6e328ec2c1b7126655ffa38799c7  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=15da5bcf93cd9972542c90241cdb1d88567308b72b0c7b7ca9363bf4ae270227 height=74 version=0x20000000 log2_work=7.2288187 tx=75 date='2021-11-11T17:05:24Z' progress=1.000000 cache=0.0MiB(74txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet f60f64507aece22aa5733fd6cbf83efe7d75410035cd04034e7bd0a950a75e77  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=72bae10000c702d8dc508c5debd3672569e798a3c3e098b227a10454b07d1e13 height=75 version=0x20000000 log2_work=7.2479275 tx=76 date='2021-11-11T17:05:24Z' progress=1.000000 cache=0.0MiB(75txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 1f2d306dace220e81cd1a623f1978462df573932ec60109b444f9e4f3f151730  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=05f34e11e519500a9f9c15cf91e9b65fec59fff02cd6657cb6c0375e09a0a7da height=76 version=0x20000000 log2_work=7.2667865 tx=77 date='2021-11-11T17:05:24Z' progress=1.000000 cache=0.0MiB(76txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet cf356950e7abc72be6ca2345752b7d733b987563c1be7effc163665f4d4d674f  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 16762f040268ab70a21ab5cc9478a8e057206f9812aac0015ebb88644e85142f  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=7b40bdf04aa1e109bdd635c03e83368c123f87b03c5f4289ceed697de8968cfa height=77 version=0x20000000 log2_work=7.2854022 tx=78 date='2021-11-11T17:05:24Z' progress=1.000000 cache=0.0MiB(77txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet de4fc772a574668c4d2e3d1eb7c236ca7ecc0ec54b9ac262b2d4a5789dcf23a3  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=46a205bf0aa4c59779b6f58a681deefb5e3622d085ba339bb237ca8b7636a459 height=78 version=0x20000000 log2_work=7.3037807 tx=79 date='2021-11-11T17:05:24Z' progress=1.000000 cache=0.0MiB(78txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=7ed8a1895bd43fb980483991763310705c48baf73d4ae29a4b991989a123956d height=79 version=0x20000000 log2_work=7.3219281 tx=80 date='2021-11-11T17:05:24Z' progress=1.000000 cache=0.0MiB(79txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet f6b4b75cca5824d6024cab93df4896bbcf995a5530953ae847f2152b07711cca  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=62266f872875187335ac70527b02b40953cab33870ce17f8091f19dd225f3aa7 height=80 version=0x20000000 log2_work=7.33985 tx=81 date='2021-11-11T17:05:25Z' progress=1.000000 cache=0.0MiB(80txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=1f8f875cb816dea0552aff4c30dd61a797b097ba81d0c1a936b2b1ad50de9aab height=81 version=0x20000000 log2_work=7.357552 tx=82 date='2021-11-11T17:05:25Z' progress=1.000000 cache=0.0MiB(81txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet f4a1e6ddf1a3c173cc5394e5cf2c059d0c5b34eaa2209dd29450c25121c09ce8  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=6b011a99b0c6ab9e58b2fb2422ffa3ba0befe94f5b4e5bf7713070116f742bea height=82 version=0x20000000 log2_work=7.3750394 tx=83 date='2021-11-11T17:05:25Z' progress=1.000000 cache=0.0MiB(82txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet cd56a4cb63a5b2ee619201355aa51bcb71ee56c7ee7c1eb05ccd2a3c765d1c0e  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 0cf2d4d27707e1b6a74c2ccedab8fbd3b04fba8804060df09f6f2545990e3fd5  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet b2d6a74e2c4e1ad81b6d23210abca10a1a1e0255f1dc05b2d79b9e2f667cfa6b  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=544d2276d9a3d301819a204cf1a370b2a248110634f36e028ff9bad537862a07 height=83 version=0x20000000 log2_work=7.3923174 tx=84 date='2021-11-11T17:05:25Z' progress=1.000000 cache=0.0MiB(83txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 938e612d93d7b77ada069e479bc605596d5d9f9e8cfb3efddbbfd1dae2ed0838  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=691e8bef62fd61d7a02dbf1ffffec7859ee89f06a881173a3d5e5c50b7216c46 height=84 version=0x20000000 log2_work=7.4093909 tx=85 date='2021-11-11T17:05:25Z' progress=1.000000 cache=0.0MiB(84txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 9efeb1af3258d26ec5456abb987c5e3c23ed529d34cd4f204199d6987020485f  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=3c573bd39a8eccb675326f211c155c8fc824ee20eff1964179b2dce43b683365 height=85 version=0x20000000 log2_work=7.4262648 tx=86 date='2021-11-11T17:05:25Z' progress=1.000000 cache=0.0MiB(85txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=0b05d1c4d82c4baf826b097bbcd3f50eedb9ff5d63104f00802b4156237ece76 height=86 version=0x20000000 log2_work=7.4429435 tx=87 date='2021-11-11T17:05:26Z' progress=1.000000 cache=0.0MiB(86txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 1b37d67eb2765543b895e8c34a40b9f0c6bff8ea09ec6f2dd49e9e777034e4c0  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 7279649af12442225204919ec283fc522e557bd258824dc5d03603b377054b93  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=24771a2b1b05ede319865f825c73dba30836600502bb49a5fe21684a546ee95d height=87 version=0x20000000 log2_work=7.4594316 tx=88 date='2021-11-11T17:05:26Z' progress=1.000000 cache=0.0MiB(87txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=5fbbb122029c699d4c40834c97416cd0fa5e55bdd68b4bf78234ff0eaee4f16c height=88 version=0x20000000 log2_work=7.4757334 tx=89 date='2021-11-11T17:05:26Z' progress=1.000000 cache=0.0MiB(88txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 84920a24f88e4220198913afeea033278b161e77811bcb4837f2c7d442909809  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 5b806cb909a22370bc1bb411fd8d32cbc50be62118ffd802f3cf37920296333a  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=6e506a2e2361efe4cd651f14cd2533cb8c572113d80090b2cfc7763b0fb50564 height=89 version=0x20000000 log2_work=7.4918531 tx=90 date='2021-11-11T17:05:26Z' progress=1.000000 cache=0.0MiB(89txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet a9ee3479be18a004cc0aa476ec51db7c71af9e9b80c4a96ebb8978c6dc156225  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=691b39d55bdd3fbb41ddc01eda03bc7288cafa8c3175dee5f557fc3be7d164ff height=90 version=0x20000000 log2_work=7.5077946 tx=91 date='2021-11-11T17:05:26Z' progress=1.000000 cache=0.0MiB(90txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=06313aaa58fe9133e56bfbb1c00d231f51cac5f27177e8d5df8a738557e1e80e height=91 version=0x20000000 log2_work=7.523562 tx=92 date='2021-11-11T17:05:26Z' progress=1.000000 cache=0.0MiB(91txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=2ec0c7580f9e144b88e9712525f97343354a5b70fc2c21c6731babb5d3eb0a30 height=92 version=0x20000000 log2_work=7.5391588 tx=93 date='2021-11-11T17:05:27Z' progress=1.000000 cache=0.0MiB(92txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=3828f6af175cb2e2a0a6418e34e4364da54e0922757bfb6165a95d854b9fe101 height=93 version=0x20000000 log2_work=7.5545889 tx=94 date='2021-11-11T17:05:27Z' progress=1.000000 cache=0.0MiB(93txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=06309a2d066ca1a8ae551d968b8101ffd0b092e7be768410a7664c6ba5710f8f height=94 version=0x20000000 log2_work=7.5698556 tx=95 date='2021-11-11T17:05:27Z' progress=1.000000 cache=0.0MiB(94txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 25440241f232c2488b7a005e52fea0a729e6fe4475b152168ad5be766575589e  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 77c805ce789093f4ac04700cff45abfb10ac9c6e9ed0a823658a9d26b5e30339  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 2770912ec15ea30054a088581973a2eb12d25b31926960c9e115ccffec5d6c6d  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet d4a215101dbc04f2497caf8f834672185aa4aa2c9c8cfd303d084b1985ddb8fc  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 60e1d14f866df8c6d939fbcc7eb4e5d8fc0272fe939681d862ae1913eab2c2c4  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=467699d538552bb3f4f608e4cf2ff14f31885bdc03896d9c4366dfc24dc3eeda height=95 version=0x20000000 log2_work=7.5849625 tx=96 date='2021-11-11T17:05:27Z' progress=1.000000 cache=0.0MiB(95txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=60f5019c3dc5e4104fc524c1ce09852e54fb82e92029ab4c4c4fc51502ed8ce5 height=96 version=0x20000000 log2_work=7.5999128 tx=97 date='2021-11-11T17:05:27Z' progress=1.000000 cache=0.0MiB(96txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 5b1b1f2de133e553f80059c6aa8114865306ffae22c5bf64ce7defaf9d96325b  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 30a3890fbdbefb56d263e3332b9250dfbc04dcda4cf9f573c129104a5f34dabf  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=4589bd65a6d29c022c66699b57c8d50d148bec3ccbfab5150b32b272f5c6e884 height=97 version=0x20000000 log2_work=7.6147098 tx=98 date='2021-11-11T17:05:27Z' progress=1.000000 cache=0.0MiB(97txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=32aa3fb1361e25d5f2ceb8d3e67aea43d097534116679c97329f4f9572510c8b height=98 version=0x20000000 log2_work=7.6293566 tx=99 date='2021-11-11T17:05:28Z' progress=1.000000 cache=0.0MiB(98txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 213b0387b1317f6c927d06890c1a90f3864fbf5c6e3932c0d6296f0ed7dc7f62  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 697c20a520d5b764836f7282d7c08957209feed6b477b6c44f327484b4fc7623  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=25db0d05bc12441d12e5504913cb1ad7f69780bb3a66ec45ff233701ef5c9530 height=99 version=0x20000000 log2_work=7.6438562 tx=100 date='2021-11-11T17:05:28Z' progress=1.000000 cache=0.0MiB(99txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=3be01c2080b57d2749a767d6293661fe547d746159c9c106e5390d937608f12e height=100 version=0x20000000 log2_work=7.6582115 tx=101 date='2021-11-11T17:05:28Z' progress=1.000000 cache=0.0MiB(100txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet d72f2060eec8ffe44e3c8136206afc36d31908bdce14af63008929441f1473f4  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 7d91d70dffd19ba9598fe670c35744d785413c5eb3257dd5c6d66cc2c882848b  new
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z UpdateTip: new best=52b6444770059faaca664fba474082cb945cdbf68e41e170772412c7ffbf7668 height=101 version=0x20000000 log2_work=7.6724253 tx=102 date='2021-11-11T17:05:28Z' progress=1.000000 cache=0.0MiB(101txo)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:10Z [Alice] AddToWallet 98b43af6ea64dcaa04b576b37b935aae715b7a1641b9330473323f5fd7c76ab8  new
+[36mbitcoin-cli_1         |[0m [
+[36mbitcoin-cli_1         |[0m   "2c6bb17b25b52251aa243d9529be4cb384aefda583c898e04862479da25cbc4d",
+[36mbitcoin-cli_1         |[0m   "0efa172eb60c5af8c50cc5ee7d91eedbd2e616a85a26597f7fd116aec58ec7b6",
+[36mbitcoin-cli_1         |[0m   "328976f09405144a395a7395af2f1d6aff76eeb1326d80bfd2815421a03f3a6a",
+[36mbitcoin-cli_1         |[0m   "6e22a63f558a2e76f1920f34366a231437c03f0de31be79c76c74dbbb1d2ba09",
+[36mbitcoin-cli_1         |[0m   "7d9e4c92fbf514a7dd28644cd7b85e0060a4da20d307569b378554ecd05cc57b",
+[36mbitcoin-cli_1         |[0m   "12e0d9a3bbf349d72e91740d6195a7ccb7b9784dcc23cbc002b48e615b80fc4c",
+[36mbitcoin-cli_1         |[0m   "3efbb8795b21f08ec88d832b979d99d266d6fc8a84532024719cc15bc09681cc",
+[36mbitcoin-cli_1         |[0m   "35ba7467f29f93a6b30aa882f5dcde655e571396ce18dd7d4fd9d199b6dc780f",
+[36mbitcoin-cli_1         |[0m   "4f8dd8c7177f60958ace09cfef74a89b5b67e7030da7b3dd69174a2040df83a1",
+[36mbitcoin-cli_1         |[0m   "3bed14b7e3d9c0f7184046448e754f44c1001a326355f95efd62d99c91e2693e",
+[36mbitcoin-cli_1         |[0m   "08cdd6e21f777e3544dc8b7cae98b0f9f639c894b5aaa8260abf2b4af917d48d",
+[36mbitcoin-cli_1         |[0m   "23ffe704aa5e0e704af7d66097dad67527832b6d5baba4fa5dbb37a62c20ff00",
+[36mbitcoin-cli_1         |[0m   "455f0d42b72309cd494eba43eec182e4d7f648755281eab976c367cac92d6184",
+[36mbitcoin-cli_1         |[0m   "496917672a06a47b0857fd6ddce1a0f5120345fd644347bbae6b6641a73cbc45",
+[36mbitcoin-cli_1         |[0m   "35a15258bba08f306bc702eef64ab6d4dff9fb55de80282c5f2f922fe9992bc0",
+[36mbitcoin-cli_1         |[0m   "45bdc91fd13d5e0bcc663190b15cb53d194f63a4484e8d29c921a412907f75d5",
+[36mbitcoin-cli_1         |[0m   "16e321bace22c0f8fbe2fb37f066b5b7d584829f36311511224c15ac5ef0aab7",
+[36mbitcoin-cli_1         |[0m   "1a1c1f059fabc71c3353aed3234787f64d4c115faca8cec2e4b09ed252ade4b5",
+[36mbitcoin-cli_1         |[0m   "4401fe339f5c7c963f57cd92d232ee8c50d7e6745abff90a0c17adbe8bc3ee90",
+[36mbitcoin-cli_1         |[0m   "3c131423501b58684ce12c8b7e7ed477c18ee76e4cc0288f434f9d81c2a30045",
+[36mbitcoin-cli_1         |[0m   "0922d0a4e19181e470c33575c077dca6c5722f64294bfa517e3c6c11a7731b04",
+[36mbitcoin-cli_1         |[0m   "08eb1ba865d21812bcd60faf7a79ab440f22715c74182873bd5e5ea3d0211562",
+[36mbitcoin-cli_1         |[0m   "2b58a279a0d4eec5b0928752af10ae51f173ff04860435edc2bf394e8fbdf720",
+[36mbitcoin-cli_1         |[0m   "18df921279984acbbb40cb4d0832d9eae63913d183ddb10b73c65ee1acb51c81",
+[36mbitcoin-cli_1         |[0m   "34288693bbe74a6110fca223e72ce1e72e009e015f7f0bac40c3671663fba9b9",
+[36mbitcoin-cli_1         |[0m   "60ed05082ce181d77706ff5f4fab0e66525d4f7d97695417d58556eedb0733fc",
+[36mbitcoin-cli_1         |[0m   "207cf893ece71c7a8a3791429333b1e5919e876ebd85c6a7db6da6c74057fde1",
+[36mbitcoin-cli_1         |[0m   "1ee2da776c9cbbfa0ebf16a5f159dfe9fedf764c36bb1201e8faae1eb80dcce3",
+[36mbitcoin-cli_1         |[0m   "5ae0707f917d0c631c6745b9f87b91259f4b93d1cf0991e95a704a1da3086fe1",
+[36mbitcoin-cli_1         |[0m   "6a2bf8d04f1dd4196bccf309f8e9abcdd3f4e9de341962ae9e7f87af5ae7b24b",
+[36mbitcoin-cli_1         |[0m   "184eef5f5dc0d1127517c535a16e9b796b55924adf1673f13f9b621ab34e275f",
+[36mbitcoin-cli_1         |[0m   "03a1dfd925e051d454f79ff3f19eecafccddc1dfbbab4e809ffb3ea9508f353d",
+[36mbitcoin-cli_1         |[0m   "3b67413bc6934728b4c6a08e280f4cd561fa9191721319a4578e086e88312272",
+[36mbitcoin-cli_1         |[0m   "243934dfe73106ab356f24282d237ce51a96ed333144120bd600c76ee6cc3d53",
+[36mbitcoin-cli_1         |[0m   "3aaad885031a2ec38a357a95ab86399b8ea50ef8d2221a178a0de4bd6b24ec5c",
+[36mbitcoin-cli_1         |[0m   "7ba77f7537c9815442b1dc05bf176792f8a94969c869e601085944d2a90b3cf9",
+[36mbitcoin-cli_1         |[0m   "7d9871a04bae4cefd1fd642ebede00b64426376ab48f61d8cb6be75953e5d06d",
+[36mbitcoin-cli_1         |[0m   "15cdc988bcdbfc111380d9dad34e25d986912675716bcb88dc4f8ad1ff682cca",
+[36mbitcoin-cli_1         |[0m   "512a2f435c59087d67c02b1ba8d045407021ba4962a37e40ea2e91e2ddeb0fff",
+[36mbitcoin-cli_1         |[0m   "3a04a3b69e2ee09490f38748655dbdbae26d55dd78b86d273c30c1046a83a318",
+[36mbitcoin-cli_1         |[0m   "079d5dee007a4af8d780b41cdf45c14b5fd510384497f72dbdcd53ba7bc00949",
+[36mbitcoin-cli_1         |[0m   "2edc171aedcf499e5630af972cbd72de39abcb3d6c50bdec522a69d4b909d17f",
+[36mbitcoin-cli_1         |[0m   "2b51e6107c53a67123230d2f6fe7addf4b0e1c88b43dec54e7c4f023970bf389",
+[36mbitcoin-cli_1         |[0m   "2511d7e50e4de7a79ce466d4d00f8bf301ff56048db7973fc58f10f97322650a",
+[36mbitcoin-cli_1         |[0m   "103b24fe3c2c8775590158469e911ef28a6c1fae0c0f4e38ec3e56aa2ea59e6e",
+[36mbitcoin-cli_1         |[0m   "7be8686355e52d15d0cae28138e05f326f867acaaa518b1ae6aecd6df87ce0c8",
+[36mbitcoin-cli_1         |[0m   "06ca8a635e73ad11db6cff2c74ae3120672a790b9cd7f097449e5e8cc8c08ee6",
+[36mbitcoin-cli_1         |[0m   "22e0fb2ac844c70fab2e46f30522e09aa0fe28657051075ff4e6d0728c0a9481",
+[36mbitcoin-cli_1         |[0m   "224cd0dae8efee98dd4f35c30640aa7855ef94570a7397fa3893d6b0be0f20e9",
+[36mbitcoin-cli_1         |[0m   "284f9118962471ed0dbfc908beb3c3c009caa53c17092a0a2b0aa1ec3707b24b",
+[36mbitcoin-cli_1         |[0m   "06b23454dee028277b3249b91f1dc872c5104985ff03d6fde260bc2bf9576e86",
+[36mbitcoin-cli_1         |[0m   "7cdf81e36ca1d9f61830d7e086611481c8c2d1a2098f5529b17cd22b092ebd92",
+[36mbitcoin-cli_1         |[0m   "696e29a382fa124ba5100f32612cc17baeafc663994ac956994f442c9206c528",
+[36mbitcoin-cli_1         |[0m   "50006910557aa62b554eb069760be4641178a47038cc46167ea114060930d4e1",
+[36mbitcoin-cli_1         |[0m   "15b0db3c44e619bccc6efdb2e1b1d139e3d6868ad697e627c5a85ab648cddd40",
+[36mbitcoin-cli_1         |[0m   "53f0c9bf81bd40e42b6f799f65085f19ab6489c50615d9a48d7d172351c4d9a9",
+[36mbitcoin-cli_1         |[0m   "304564c640c65778932465806c7e119689d613bab3d0dd94703ef200c61a03e6",
+[36mbitcoin-cli_1         |[0m   "0a6001c3329b33690dec9129e55e5c79a8ef33489aa27aeaf49263451aae8ccb",
+[36mbitcoin-cli_1         |[0m   "32072257b49ee9424c27cfa18d880062c0fe715f34357c11709222354004574f",
+[36mbitcoin-cli_1         |[0m   "6cb7d734a3349433636324d60db2c5a05bc320cd34939b29ad4dad34998225c3",
+[36mbitcoin-cli_1         |[0m   "174d0d18705989fc78dff05736a77672ccf51d6a0930c484d16eb430891ae35c",
+[36mbitcoin-cli_1         |[0m   "2b270b658b1945bbb67105bfb06c1cea67285d72ce41368ba851b5e2dcc19916",
+[36mbitcoin-cli_1         |[0m   "31c8b14fe571b6f3a508a76e05c5694eaaabd5c40821016761fddb94ea0e8980",
+[36mbitcoin-cli_1         |[0m   "31d8212dc74c78230e61ddf40e14b443ec6d454a3e5536701f45fddd982a44d7",
+[36mbitcoin-cli_1         |[0m   "421c05c9073caeaaa99d7f19dbb1e86a6388e14ea73bc7b359709d975a262df1",
+[36mbitcoin-cli_1         |[0m   "1692b6b26bebb9972d0f21dde1443e1d111545de2e0419a415239e6eeafde605",
+[36mbitcoin-cli_1         |[0m   "524e7897f3d07d55153639c641fa5096215269fbbe33e91d56c9d250c1df1a76",
+[36mbitcoin-cli_1         |[0m   "11e3308157d9dc1c04c81b101ccaa76c165ca502c3c628d87d22ea21b0bbef28",
+[36mbitcoin-cli_1         |[0m   "14eba5dd81cec56443804b874827c7047dc303556a0c52217021ad384e5573e3",
+[36mbitcoin-cli_1         |[0m   "3a2dee443a6afc9ba5c69ae1b80ee8600f813537caf2437a2842ed56fba3c69a",
+[36mbitcoin-cli_1         |[0m   "27492854833f0e458b5671444b32cb87369aaf316e78437661755035277ee711",
+[36mbitcoin-cli_1         |[0m   "0cc98c8a1356f02e970386d6e7f57d1a8b938f2f6729d0f47e5a76c5102bfb9b",
+[36mbitcoin-cli_1         |[0m   "594131d3bac6255c4f04024ac947c7b457cc057a714a56babe6189dddf83d8ff",
+[36mbitcoin-cli_1         |[0m   "15da5bcf93cd9972542c90241cdb1d88567308b72b0c7b7ca9363bf4ae270227",
+[36mbitcoin-cli_1         |[0m   "72bae10000c702d8dc508c5debd3672569e798a3c3e098b227a10454b07d1e13",
+[36mbitcoin-cli_1         |[0m   "05f34e11e519500a9f9c15cf91e9b65fec59fff02cd6657cb6c0375e09a0a7da",
+[36mbitcoin-cli_1         |[0m   "7b40bdf04aa1e109bdd635c03e83368c123f87b03c5f4289ceed697de8968cfa",
+[36mbitcoin-cli_1         |[0m   "46a205bf0aa4c59779b6f58a681deefb5e3622d085ba339bb237ca8b7636a459",
+[36mbitcoin-cli_1         |[0m   "7ed8a1895bd43fb980483991763310705c48baf73d4ae29a4b991989a123956d",
+[36mbitcoin-cli_1         |[0m   "62266f872875187335ac70527b02b40953cab33870ce17f8091f19dd225f3aa7",
+[36mbitcoin-cli_1         |[0m   "1f8f875cb816dea0552aff4c30dd61a797b097ba81d0c1a936b2b1ad50de9aab",
+[36mbitcoin-cli_1         |[0m   "6b011a99b0c6ab9e58b2fb2422ffa3ba0befe94f5b4e5bf7713070116f742bea",
+[36mbitcoin-cli_1         |[0m   "544d2276d9a3d301819a204cf1a370b2a248110634f36e028ff9bad537862a07",
+[36mbitcoin-cli_1         |[0m   "691e8bef62fd61d7a02dbf1ffffec7859ee89f06a881173a3d5e5c50b7216c46",
+[36mbitcoin-cli_1         |[0m   "3c573bd39a8eccb675326f211c155c8fc824ee20eff1964179b2dce43b683365",
+[36mbitcoin-cli_1         |[0m   "0b05d1c4d82c4baf826b097bbcd3f50eedb9ff5d63104f00802b4156237ece76",
+[36mbitcoin-cli_1         |[0m   "24771a2b1b05ede319865f825c73dba30836600502bb49a5fe21684a546ee95d",
+[36mbitcoin-cli_1         |[0m   "5fbbb122029c699d4c40834c97416cd0fa5e55bdd68b4bf78234ff0eaee4f16c",
+[36mbitcoin-cli_1         |[0m   "6e506a2e2361efe4cd651f14cd2533cb8c572113d80090b2cfc7763b0fb50564",
+[36mbitcoin-cli_1         |[0m   "691b39d55bdd3fbb41ddc01eda03bc7288cafa8c3175dee5f557fc3be7d164ff",
+[36mbitcoin-cli_1         |[0m   "06313aaa58fe9133e56bfbb1c00d231f51cac5f27177e8d5df8a738557e1e80e",
+[36mbitcoin-cli_1         |[0m   "2ec0c7580f9e144b88e9712525f97343354a5b70fc2c21c6731babb5d3eb0a30",
+[36mbitcoin-cli_1         |[0m   "3828f6af175cb2e2a0a6418e34e4364da54e0922757bfb6165a95d854b9fe101",
+[36mbitcoin-cli_1         |[0m   "06309a2d066ca1a8ae551d968b8101ffd0b092e7be768410a7664c6ba5710f8f",
+[36mbitcoin-cli_1         |[0m   "467699d538552bb3f4f608e4cf2ff14f31885bdc03896d9c4366dfc24dc3eeda",
+[36mbitcoin-cli_1         |[0m   "60f5019c3dc5e4104fc524c1ce09852e54fb82e92029ab4c4c4fc51502ed8ce5",
+[36mbitcoin-cli_1         |[0m   "4589bd65a6d29c022c66699b57c8d50d148bec3ccbfab5150b32b272f5c6e884",
+[36mbitcoin-cli_1         |[0m   "32aa3fb1361e25d5f2ceb8d3e67aea43d097534116679c97329f4f9572510c8b",
+[36mbitcoin-cli_1         |[0m   "25db0d05bc12441d12e5504913cb1ad7f69780bb3a66ec45ff233701ef5c9530",
+[36mbitcoin-cli_1         |[0m   "3be01c2080b57d2749a767d6293661fe547d746159c9c106e5390d937608f12e",
+[36mbitcoin-cli_1         |[0m   "52b6444770059faaca664fba474082cb945cdbf68e41e170772412c7ffbf7668"
+[36mbitcoin-cli_1         |[0m ]
+[36minterbtc-api_bitcoin-cli_1 exited with code 0
+[0m[32melectrs_1             |[0m DEBUG - opening DB at "./db/regtest/newindex/txstore"
+[32melectrs_1             |[0m DEBUG - 0 blocks were added
+[32melectrs_1             |[0m DEBUG - opening DB at "./db/regtest/newindex/history"
+[32melectrs_1             |[0m DEBUG - 0 blocks were indexed
+[32melectrs_1             |[0m DEBUG - opening DB at "./db/regtest/newindex/cache"
+[32melectrs_1             |[0m DEBUG - downloading all block headers up to 52b6444770059faaca664fba474082cb945cdbf68e41e170772412c7ffbf7668
+[32melectrs_1             |[0m TRACE - downloading 102 block headers
+[32melectrs_1             |[0m INFO - hash=52b6444770059faaca664fba474082cb945cdbf68e41e170772412c7ffbf7668 height=101 @ 2021-11-11T17:05:28+00:00 (102 left to index)
+[32melectrs_1             |[0m DEBUG - adding transactions from 102 blocks using Bitcoind
+[32melectrs_1             |[0m DEBUG - hash=52b6444770059faaca664fba474082cb945cdbf68e41e170772412c7ffbf7668 height=101 @ 2021-11-11T17:05:28+00:00 (102 left to index)
+[32melectrs_1             |[0m DEBUG - writing 700 rows to RocksDB { path: "./db/regtest/newindex/txstore" }, flush=Disable
+[32melectrs_1             |[0m DEBUG - writing 14 rows to RocksDB { path: "./db/regtest/newindex/txstore" }, flush=Disable
+[32melectrs_1             |[0m DEBUG - starting full compaction on RocksDB { path: "./db/regtest/newindex/txstore" }
+[32melectrs_1             |[0m DEBUG - finished full compaction on RocksDB { path: "./db/regtest/newindex/txstore" }
+[32melectrs_1             |[0m DEBUG - indexing history from 102 blocks using Bitcoind
+[32melectrs_1             |[0m DEBUG - hash=52b6444770059faaca664fba474082cb945cdbf68e41e170772412c7ffbf7668 height=101 @ 2021-11-11T17:05:28+00:00 (102 left to index)
+[32melectrs_1             |[0m DEBUG - writing 299 rows to RocksDB { path: "./db/regtest/newindex/history" }, flush=Disable
+[32melectrs_1             |[0m DEBUG - writing 6 rows to RocksDB { path: "./db/regtest/newindex/history" }, flush=Disable
+[32melectrs_1             |[0m DEBUG - starting full compaction on RocksDB { path: "./db/regtest/newindex/history" }
+[32melectrs_1             |[0m DEBUG - finished full compaction on RocksDB { path: "./db/regtest/newindex/history" }
+[32melectrs_1             |[0m DEBUG - flushing to disk
+[32melectrs_1             |[0m DEBUG - updating synced tip to 52b6444770059faaca664fba474082cb945cdbf68e41e170772412c7ffbf7668
+[32melectrs_1             |[0m DEBUG - applying 102 new headers from height 0
+[32melectrs_1             |[0m TRACE - registering with poller
+[32melectrs_1             |[0m INFO - Electrum RPC server running on 127.0.0.1:60401
+[32melectrs_1             |[0m INFO - REST server running on [::]:3002
+[32melectrs_1             |[0m TRACE - registering with poller
+[34minterbtc_1            |[0m 2021-11-11 17:05:15 Using default protocol ID "sup" because none is configured in the chain specs    
+[34minterbtc_1            |[0m 2021-11-11 17:05:15 🏷 Local node identity is: 12D3KooWC8gds9sqJYuQUsvzVZ8bYfTHu43hHs6AQqQpg4M9Yju1    
+[34minterbtc_1            |[0m 2021-11-11 17:05:15 📦 Highest known block at #0    
+[34minterbtc_1            |[0m 2021-11-11 17:05:15 〽️ Prometheus exporter started at 127.0.0.1:9615    
+[34minterbtc_1            |[0m 2021-11-11 17:05:15 Listening for new connections on 0.0.0.0:9944.    
+[34minterbtc_1            |[0m 2021-11-11 17:05:15 Accepted a new tcp connection from 192.168.80.2:53038.    
+[36;1moracle_1              |[0m [2021-11-11T17:05:15Z INFO  runtime::conn] Connected!
+[36;1moracle_1              |[0m [2021-11-11T17:05:15Z INFO  runtime::rpc] Refreshing nonce: 0
+[36;1moracle_1              |[0m [2021-11-11T17:05:15Z INFO  oracle] Setting fee estimate: 1000000000000000000 (2021-11-11 17:05:15.673392571 +00:00)
+[36;1moracle_1              |[0m [2021-11-11T17:05:15Z INFO  subxt::rpc] Submitting Extrinsic `0x67db3f7fde976c5a7443fbf2d489bfd1e4ef78f4730b37a09d070bd8f291cb76`
+[36;1moracle_1              |[0m [2021-11-11T17:05:15Z INFO  oracle] Setting exchange rate: 230800000000000000000000 (2021-11-11 17:05:15.674554221 +00:00)
+[36;1moracle_1              |[0m [2021-11-11T17:05:15Z INFO  subxt::rpc] Submitting Extrinsic `0x6b79b5843a6e69f207408cbc0697c846838656220403e792b348c498795d1741`
+[34minterbtc_1            |[0m 2021-11-11 17:05:15 🙌 Starting consensus session on top of parent 0x47750565f7f1a4a9538385b8e97ff0464368c204642437b330e091372f2a32aa    
+[36;1moracle_1              |[0m [2021-11-11T17:05:15Z INFO  subxt::rpc] received status Ready
+[36;1moracle_1              |[0m [2021-11-11T17:05:15Z INFO  subxt::rpc] received status Ready
+[34minterbtc_1            |[0m 2021-11-11 17:05:15 Accepted a new tcp connection from 192.168.80.5:43620.    
+[35mfaucet_1              |[0m [2021-11-11T17:05:15Z INFO  runtime::conn] Connected!
+[35mfaucet_1              |[0m [2021-11-11T17:05:16Z INFO  runtime::rpc] Refreshing nonce: 0
+[35mfaucet_1              |[0m [2021-11-11T17:05:16Z INFO  faucet::http] Starting http server...
+[34minterbtc_1            |[0m 2021-11-11 17:05:16 🎁 Prepared block for proposing at 1 [hash: 0xffac68cb4da3d92a078252993c196d7dafd102f40a60b605c1d2bae5c94f3079; parent_hash: 0x4775…32aa; extrinsics (3): [0x9d71…db24, 0x67db…cb76, 0x6b79…1741]]    
+[34minterbtc_1            |[0m 2021-11-11 17:05:16 Instant Seal success: CreatedBlock { hash: 0xffac68cb4da3d92a078252993c196d7dafd102f40a60b605c1d2bae5c94f3079, aux: ImportedAux { header_only: false, clear_justification_requests: false, needs_justification: false, bad_justification: false, is_new_best: true } }    
+[34minterbtc_1            |[0m 2021-11-11 17:05:16 ✨ Imported #1 (0xffac…3079)    
+[34minterbtc_1            |[0m 2021-11-11 17:05:16 Off-chain worker started on block 1    
+[36;1moracle_1              |[0m [2021-11-11T17:05:16Z INFO  subxt::rpc] received status InBlock(0xffac68cb4da3d92a078252993c196d7dafd102f40a60b605c1d2bae5c94f3079)
+[36;1moracle_1              |[0m [2021-11-11T17:05:16Z INFO  subxt::rpc] received status InBlock(0xffac68cb4da3d92a078252993c196d7dafd102f40a60b605c1d2bae5c94f3079)
+[34minterbtc_1            |[0m 2021-11-11 17:05:20 💤 Idle (0 peers), best: #1 (0xffac…3079), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:05:25 💤 Idle (0 peers), best: #1 (0xffac…3079), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:05:30 💤 Idle (0 peers), best: #1 (0xffac…3079), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:32.728[0m [32m INFO[0m service: AccountId: 5FCfAonRZgTFrTd9HREEyeJjDpT397KMzizE6T3DvebLFE7n
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:32.746[0m [32m INFO[0m bitcoin: Connecting to bitcoin-core...    
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:32.751[0m [32m INFO[0m bitcoin: Connected!    
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:32.752[0m [32m INFO[0m bitcoin: Waiting for bitcoin-core to sync...    
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:32.754[0m [32m INFO[0m bitcoin: Synced!    
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:32.754[0m [32m INFO[0m runtime::conn: Connecting to the btc-parachain...    
+[34minterbtc_1            |[0m 2021-11-11 17:05:32 Accepted a new tcp connection from 192.168.80.3:55076.    
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:32.757[0m [32m INFO[0m runtime::conn: Connected!    
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:32.926[0m [32m INFO[0m runtime::rpc: Refreshing nonce: 0    
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:32.935[0m [32m INFO[0m vault::system: Using 1 bitcoin confirmations
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:32.937[0m [32m INFO[0m vault::system: [5FCfAonRZgTFrTd9HREEyeJjDpT397KMzizE6T3DvebLFE7n[Polkadot->kinBTC]] Automatically registering vault
+[33mbitcoind_1            |[0m 2021-11-11T17:05:32Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:32Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/vault_3-DOT-KBTC
+[33mbitcoind_1            |[0m 2021-11-11T17:05:32Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/vault_3-DOT-KBTC/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/vault_3-DOT-KBTC/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:32Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:32Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/vault_3-DOT-KBTC/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/vault_3-DOT-KBTC/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:32Z [vault_3-DOT-KBTC] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:32Z [vault_3-DOT-KBTC] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:32Z [vault_3-DOT-KBTC] Performing wallet upgrade to 169900
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:33.026[0m [32m INFO[0m service: AccountId: 5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:33.032[0m [32m INFO[0m bitcoin: Connecting to bitcoin-core...    
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:33.035[0m [32m INFO[0m bitcoin: Connected!    
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:33.035[0m [32m INFO[0m bitcoin: Waiting for bitcoin-core to sync...    
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:33.036[0m [32m INFO[0m bitcoin: Synced!    
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:33.036[0m [32m INFO[0m runtime::conn: Connecting to the btc-parachain...    
+[34minterbtc_1            |[0m 2021-11-11 17:05:33 Accepted a new tcp connection from 192.168.80.6:35284.    
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:33.038[0m [32m INFO[0m runtime::conn: Connected!    
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:33.209[0m [32m INFO[0m runtime::rpc: Refreshing nonce: 0    
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:33.217[0m [32m INFO[0m vault::system: Using 1 bitcoin confirmations
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:33.219[0m [32m INFO[0m vault::system: [5Ck5SLSHYac6WFt5UZRSsdJjwmpSZq85fd5TRNAdZQVzEAPT[Polkadot->kinBTC]] Automatically registering vault
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/vault_1-DOT-KBTC
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/vault_1-DOT-KBTC/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/vault_1-DOT-KBTC/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/vault_1-DOT-KBTC/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/vault_1-DOT-KBTC/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_1-DOT-KBTC] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_1-DOT-KBTC] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_1-DOT-KBTC] Performing wallet upgrade to 169900
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:33.254[0m [32m INFO[0m service: AccountId: 5CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:33.260[0m [32m INFO[0m bitcoin: Connecting to bitcoin-core...    
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:33.263[0m [32m INFO[0m bitcoin: Connected!    
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:33.263[0m [32m INFO[0m bitcoin: Waiting for bitcoin-core to sync...    
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:33.265[0m [32m INFO[0m bitcoin: Synced!    
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:33.265[0m [32m INFO[0m runtime::conn: Connecting to the btc-parachain...    
+[34minterbtc_1            |[0m 2021-11-11 17:05:33 Accepted a new tcp connection from 192.168.80.8:52730.    
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:33.267[0m [32m INFO[0m runtime::conn: Connected!    
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:33.439[0m [32m INFO[0m runtime::rpc: Refreshing nonce: 0    
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:33.447[0m [32m INFO[0m vault::system: Using 1 bitcoin confirmations
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:33.449[0m [32m INFO[0m vault::system: [5CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL[Polkadot->kinBTC]] Automatically registering vault
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/vault_to_ban-DOT-KBTC
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/vault_to_ban-DOT-KBTC/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/vault_to_ban-DOT-KBTC/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/vault_to_ban-DOT-KBTC/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/vault_to_ban-DOT-KBTC/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_to_ban-DOT-KBTC] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_to_ban-DOT-KBTC] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_to_ban-DOT-KBTC] Performing wallet upgrade to 169900
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:33.527[0m [32m INFO[0m service: AccountId: 5HKPmK9GYtE1PSLsS1qiYU9xQ9Si1NcEhdeCq9sw5bqu4ns8
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:33.534[0m [32m INFO[0m bitcoin: Connecting to bitcoin-core...    
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:33.536[0m [32m INFO[0m service: AccountId: 5CRmqmsiNFExV6VbdmPJViVxrWmkaXXvBrSX8oqBT8R9vmWk
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:33.536[0m [32m INFO[0m bitcoin: Connected!    
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:33.537[0m [32m INFO[0m bitcoin: Waiting for bitcoin-core to sync...    
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:33.538[0m [32m INFO[0m bitcoin: Synced!    
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:33.538[0m [32m INFO[0m runtime::conn: Connecting to the btc-parachain...    
+[34minterbtc_1            |[0m 2021-11-11 17:05:33 Accepted a new tcp connection from 192.168.80.12:42476.    
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:33.539[0m [32m INFO[0m runtime::conn: Connected!    
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:33.544[0m [32m INFO[0m bitcoin: Connecting to bitcoin-core...    
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:33.585[0m [32m INFO[0m bitcoin: Connected!    
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:33.585[0m [32m INFO[0m bitcoin: Waiting for bitcoin-core to sync...    
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:33.587[0m [32m INFO[0m bitcoin: Synced!    
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:33.587[0m [32m INFO[0m runtime::conn: Connecting to the btc-parachain...    
+[34minterbtc_1            |[0m 2021-11-11 17:05:33 Accepted a new tcp connection from 192.168.80.11:39934.    
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:33.602[0m [32m INFO[0m runtime::conn: Connected!    
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:33.739[0m [32m INFO[0m runtime::rpc: Refreshing nonce: 0    
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:33.751[0m [32m INFO[0m vault::system: Using 1 bitcoin confirmations
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:33.752[0m [32m INFO[0m vault::system: [5HKPmK9GYtE1PSLsS1qiYU9xQ9Si1NcEhdeCq9sw5bqu4ns8[Kusama->kinBTC]] Automatically registering vault
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/vault_2-KSM-KBTC
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/vault_2-KSM-KBTC/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/vault_2-KSM-KBTC/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/vault_2-KSM-KBTC/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/vault_2-KSM-KBTC/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_2-KSM-KBTC] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_2-KSM-KBTC] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_2-KSM-KBTC] Performing wallet upgrade to 169900
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:33.795[0m [32m INFO[0m runtime::rpc: Refreshing nonce: 0    
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:33.803[0m [32m INFO[0m vault::system: Using 1 bitcoin confirmations
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:33.805[0m [32m INFO[0m vault::system: [5CRmqmsiNFExV6VbdmPJViVxrWmkaXXvBrSX8oqBT8R9vmWk[Polkadot->kinBTC]] Automatically registering vault
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_3-DOT-KBTC] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_3-DOT-KBTC] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_3-DOT-KBTC] Wallet completed loading in             984ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_3-DOT-KBTC] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_3-DOT-KBTC] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_3-DOT-KBTC] m_address_book.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z Using wallet /home/bitcoin/.bitcoin/regtest/wallets/vault_to_liquidate-DOT-KBTC
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/vault_to_liquidate-DOT-KBTC/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/vault_to_liquidate-DOT-KBTC/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z init message: Loading wallet...
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z BerkeleyEnvironment::Open: LogDir=/home/bitcoin/.bitcoin/regtest/wallets/vault_to_liquidate-DOT-KBTC/database ErrorFile=/home/bitcoin/.bitcoin/regtest/wallets/vault_to_liquidate-DOT-KBTC/db.log
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_to_liquidate-DOT-KBTC] Wallet File Version = 10500
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_to_liquidate-DOT-KBTC] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:33Z [vault_to_liquidate-DOT-KBTC] Performing wallet upgrade to 169900
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_1-DOT-KBTC] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_1-DOT-KBTC] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_1-DOT-KBTC] Wallet completed loading in             943ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_1-DOT-KBTC] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_1-DOT-KBTC] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_1-DOT-KBTC] m_address_book.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_3-DOT-KBTC] keypool reserve 1
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_3-DOT-KBTC] keypool keep 1
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:34.187[0m [32m INFO[0m subxt::rpc: Submitting Extrinsic `0xe204f164506c0d66d28c0b2381658189bd14a6229e87a2f4bf02e0f084847762`    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_1-DOT-KBTC] keypool reserve 1
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_1-DOT-KBTC] keypool keep 1
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 🙌 Starting consensus session on top of parent 0xffac68cb4da3d92a078252993c196d7dafd102f40a60b605c1d2bae5c94f3079    
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:34.264[0m [32m INFO[0m subxt::rpc: received status Ready    
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:34.266[0m [32m INFO[0m subxt::rpc: Submitting Extrinsic `0x636848e881785fabbe2608747d1bd760442a46a8f9eb6b9259e066c03e1f2495`    
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:34.270[0m [32m INFO[0m subxt::rpc: received status Ready    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 🎁 Prepared block for proposing at 2 [hash: 0xc96bf8e797f33d1b29dd7f092c68190317bb02ba6fad2bba27da97bc0b40400f; parent_hash: 0xffac…3079; extrinsics (3): [0x1660…6d40, 0xe204…7762, 0x6368…2495]]    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 Instant Seal success: CreatedBlock { hash: 0xc96bf8e797f33d1b29dd7f092c68190317bb02ba6fad2bba27da97bc0b40400f, aux: ImportedAux { header_only: false, clear_justification_requests: false, needs_justification: false, bad_justification: false, is_new_best: true } }    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 🙌 Starting consensus session on top of parent 0xc96bf8e797f33d1b29dd7f092c68190317bb02ba6fad2bba27da97bc0b40400f    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 ✨ Imported #2 (0xc96b…400f)    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 🎁 Prepared block for proposing at 3 [hash: 0xdb659a9e688d43c0a287f498aff4bf0f14548ca9aaed6541340816a7af268622; parent_hash: 0xc96b…400f; extrinsics (1): [0xad5c…ce86]]    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 Instant Seal encountered an error: Transaction pool is empty, set create_empty to true,if you want to create empty blocks    
+[34;1mvault_3_1             |[0m [2mNov 11 17:05:34.307[0m [32m INFO[0m subxt::rpc: received status InBlock(0xc96bf8e797f33d1b29dd7f092c68190317bb02ba6fad2bba27da97bc0b40400f)    
+[32;1mvault_1_1             |[0m [2mNov 11 17:05:34.311[0m [32m INFO[0m subxt::rpc: received status InBlock(0xc96bf8e797f33d1b29dd7f092c68190317bb02ba6fad2bba27da97bc0b40400f)    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 Off-chain worker started on block 2    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_ban-DOT-KBTC] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_ban-DOT-KBTC] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_ban-DOT-KBTC] Wallet completed loading in             993ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_ban-DOT-KBTC] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_ban-DOT-KBTC] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_ban-DOT-KBTC] m_address_book.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_ban-DOT-KBTC] keypool reserve 1
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_ban-DOT-KBTC] keypool keep 1
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:34.544[0m [32m INFO[0m subxt::rpc: Submitting Extrinsic `0x2e81922ffb97e8fb8613563277b361d225d3da06136fac62c6df57c62d750264`    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 🙌 Starting consensus session on top of parent 0xc96bf8e797f33d1b29dd7f092c68190317bb02ba6fad2bba27da97bc0b40400f    
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:34.549[0m [32m INFO[0m subxt::rpc: received status Ready    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 🎁 Prepared block for proposing at 3 [hash: 0x3a5adefd13314f638d15a9c594ebff97f525f33ad56a7adab7f335bee92a05bc; parent_hash: 0xc96b…400f; extrinsics (2): [0xad5c…ce86, 0x2e81…0264]]    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 Instant Seal success: CreatedBlock { hash: 0x3a5adefd13314f638d15a9c594ebff97f525f33ad56a7adab7f335bee92a05bc, aux: ImportedAux { header_only: false, clear_justification_requests: false, needs_justification: false, bad_justification: false, is_new_best: true } }    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 ✨ Imported #3 (0x3a5a…05bc)    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 Off-chain worker started on block 3    
+[36mvault_to_ban_1        |[0m [2mNov 11 17:05:34.560[0m [32m INFO[0m subxt::rpc: received status InBlock(0x3a5adefd13314f638d15a9c594ebff97f525f33ad56a7adab7f335bee92a05bc)    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_2-KSM-KBTC] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_2-KSM-KBTC] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_2-KSM-KBTC] Wallet completed loading in             914ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_2-KSM-KBTC] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_2-KSM-KBTC] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_2-KSM-KBTC] m_address_book.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_2-KSM-KBTC] keypool reserve 1
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_2-KSM-KBTC] keypool keep 1
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:34.774[0m [32m INFO[0m subxt::rpc: Submitting Extrinsic `0x6f7ee3f9330549ed7b0758683e64c27e54361c1819da30cd274e00a857a85d18`    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 🙌 Starting consensus session on top of parent 0x3a5adefd13314f638d15a9c594ebff97f525f33ad56a7adab7f335bee92a05bc    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 🎁 Prepared block for proposing at 4 [hash: 0xfc96dc2ee2aa737338c28c236bdd5169649b431df3250b81be8032659bf12b97; parent_hash: 0x3a5a…05bc; extrinsics (2): [0xc01a…1f9d, 0x6f7e…5d18]]    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 Instant Seal success: CreatedBlock { hash: 0xfc96dc2ee2aa737338c28c236bdd5169649b431df3250b81be8032659bf12b97, aux: ImportedAux { header_only: false, clear_justification_requests: false, needs_justification: false, bad_justification: false, is_new_best: true } }    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 ✨ Imported #4 (0xfc96…2b97)    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 Off-chain worker started on block 4    
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:34.819[0m [32m INFO[0m subxt::rpc: received status Ready    
+[35;1mvault_2_1             |[0m [2mNov 11 17:05:34.819[0m [32m INFO[0m subxt::rpc: received status InBlock(0xfc96dc2ee2aa737338c28c236bdd5169649b431df3250b81be8032659bf12b97)    
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_liquidate-DOT-KBTC] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_liquidate-DOT-KBTC] LegacyScriptPubKeyMan::NewKeyPool rewrote keypool
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_liquidate-DOT-KBTC] Wallet completed loading in             940ms
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_liquidate-DOT-KBTC] setKeyPool.size() = 2000
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_liquidate-DOT-KBTC] mapWallet.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_liquidate-DOT-KBTC] m_address_book.size() = 0
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_liquidate-DOT-KBTC] keypool reserve 1
+[33mbitcoind_1            |[0m 2021-11-11T17:05:34Z [vault_to_liquidate-DOT-KBTC] keypool keep 1
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:34.982[0m [32m INFO[0m subxt::rpc: Submitting Extrinsic `0xcd290e94ad6e313339b72a19083d21f3eaddfd590b81ee8f7a73f121cfaaef3e`    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 🙌 Starting consensus session on top of parent 0xfc96dc2ee2aa737338c28c236bdd5169649b431df3250b81be8032659bf12b97    
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:34.987[0m [32m INFO[0m subxt::rpc: received status Ready    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 🎁 Prepared block for proposing at 5 [hash: 0x2d826529f018aca819f62deae12ec5c8698677ea9b4a6b5cbe989a5d90d146e5; parent_hash: 0xfc96…2b97; extrinsics (2): [0x8361…e03d, 0xcd29…ef3e]]    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 Instant Seal success: CreatedBlock { hash: 0x2d826529f018aca819f62deae12ec5c8698677ea9b4a6b5cbe989a5d90d146e5, aux: ImportedAux { header_only: false, clear_justification_requests: false, needs_justification: false, bad_justification: false, is_new_best: true } }    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 ✨ Imported #5 (0x2d82…46e5)    
+[34minterbtc_1            |[0m 2021-11-11 17:05:34 Off-chain worker started on block 5    
+[33mvault_to_liquidate_1  |[0m [2mNov 11 17:05:35.000[0m [32m INFO[0m subxt::rpc: received status InBlock(0x2d826529f018aca819f62deae12ec5c8698677ea9b4a6b5cbe989a5d90d146e5)    
+[34minterbtc_1            |[0m 2021-11-11 17:05:35 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:05:40 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:05:45 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:05:50 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:05:55 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:05:57 Accepted a new tcp connection from 192.168.80.1:42596.    
+[34minterbtc_1            |[0m 2021-11-11 17:06:00 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[33mbitcoind_1            |[0m 2021-11-11T17:06:04Z Adding fixed seed nodes as DNS doesn't seem to be available.
+[34minterbtc_1            |[0m 2021-11-11 17:06:05 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:06:10 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:06:15 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:06:20 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:06:25 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:06:30 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+[34minterbtc_1            |[0m 2021-11-11 17:06:35 💤 Idle (0 peers), best: #5 (0x2d82…46e5), finalized #0 (0x4775…32aa), ⬇ 0 ⬆ 0    
+Gracefully stopping... (press Ctrl+C again to force)

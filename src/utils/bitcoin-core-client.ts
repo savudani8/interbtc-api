@@ -94,7 +94,7 @@ export class BitcoinCoreClient {
         return await this.client.command("getbalance");
     }
 
-    async sendToAddress(address: string, amount: MonetaryAmount<WrappedCurrency, BitcoinUnit>): Promise<void> {
+    async sendToAddress(address: string, amount: MonetaryAmount<WrappedCurrency, BitcoinUnit>): Promise<string> {
         return await this.client.command("sendtoaddress", address, amount.toString(Bitcoin.units.BTC));
     }
 

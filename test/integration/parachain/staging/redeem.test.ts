@@ -1,11 +1,11 @@
 import { ApiPromise, Keyring } from "@polkadot/api";
 import { KeyringPair } from "@polkadot/keyring/types";
 import { Hash } from "@polkadot/types/interfaces";
-import { InterBtc, InterBtcAmount, Kusama, Polkadot } from "@interlay/monetary-js";
+import { InterBtcAmount, Kusama, Polkadot } from "@interlay/monetary-js";
+import { InterbtcPrimitivesVaultId, VaultRegistryVault } from "@polkadot/types/lookup";
 
 import { DefaultRedeemAPI, RedeemAPI } from "../../../../src/parachain/redeem";
 import { createPolkadotAPI } from "../../../../src/factory";
-import { Vault, VaultId } from "../../../../src/interfaces/default";
 import { assert } from "../../../chai";
 import {
     BITCOIN_CORE_HOST,
@@ -30,7 +30,7 @@ import { BTCRelayAPI, CollateralCurrency, DefaultBTCRelayAPI, ElectrsAPI, newAcc
 import { ExecuteRedeem } from "../../../../src/utils/issueRedeem";
 import { DefaultElectrsAPI } from "../../../../src/external/electrs";
 
-export type RequestResult = { hash: Hash; vault: Vault };
+export type RequestResult = { hash: Hash; vault: VaultRegistryVault };
 
 describe("redeem", () => {
     let redeemAPI: RedeemAPI;
@@ -43,15 +43,17 @@ describe("redeem", () => {
     let bitcoinCoreClient: BitcoinCoreClient;
     let vault_to_liquidate: KeyringPair;
     let vault_1: KeyringPair;
-    let vault_1_id: VaultId;
+    let vault_1_id: InterbtcPrimitivesVaultId;
     let vault_2: KeyringPair;
-    let vault_2_id: VaultId;
+    let vault_2_id: InterbtcPrimitivesVaultId;
 
     let nativeCurrency: CollateralCurrency;
     let wrappedCurrency: WrappedCurrency;
 
     before(async () => {
         api = await createPolkadotAPI(PARACHAIN_ENDPOINT);
+        nativeCurrency = tickerToMonetaryCurrency(api, NATIVE_CURRENCY_TICKER) as CollateralCurrency;
+        wrappedCurrency = tickerToMonetaryCurrency(api, WRAPPED_CURRENCY_TICKER) as WrappedCurrency;
         keyring = new Keyring({ type: "sr25519" });
         vault_to_liquidate = keyring.addFromUri(VAULT_TO_LIQUIDATE_URI);
         vault_1 = keyring.addFromUri(VAULT_1_URI);
@@ -59,8 +61,6 @@ describe("redeem", () => {
         vault_2 = keyring.addFromUri(VAULT_2_URI);
         vault_2_id = newVaultId(api, vault_2.address, Kusama, wrappedCurrency);
         userAccount = keyring.addFromUri(USER_1_URI);
-        nativeCurrency = tickerToMonetaryCurrency(api, NATIVE_CURRENCY_TICKER) as CollateralCurrency;
-        wrappedCurrency = tickerToMonetaryCurrency(api, WRAPPED_CURRENCY_TICKER) as WrappedCurrency;
         electrsAPI = new DefaultElectrsAPI(ESPLORA_BASE_PATH);
         btcRelayAPI = new DefaultBTCRelayAPI(api, electrsAPI);
         redeemAPI = new DefaultRedeemAPI(api, bitcoinjs.networks.regtest, electrsAPI, wrappedCurrency, nativeCurrency, userAccount);
@@ -84,8 +84,8 @@ describe("redeem", () => {
     });
 
     it("should issue and request redeem", async () => {
-        const issueAmount = InterBtcAmount.from.BTC(0.001);
-        const redeemAmount = InterBtcAmount.from.BTC(0.0009);
+        const issueAmount = InterBtcAmount.from.BTC(0.00005);
+        const redeemAmount = InterBtcAmount.from.BTC(0.00003);
         // DOT collateral
         await issueAndRedeem(
             api,
@@ -126,16 +126,6 @@ describe("redeem", () => {
         );
     });
 
-    it("should map existing requests", async () => {
-        const userAccountId = newAccountId(api, userAccount.address);
-        const redeemRequests = await redeemAPI.mapForUser(userAccountId);
-        assert.isAtLeast(
-            redeemRequests.size,
-            1,
-            "Error in initialization setup. Should have at least 1 issue request"
-        );
-    });
-
     it("should getFeesToPay", async () => {
         const amount = InterBtcAmount.from.BTC(2);
         const feesToPay = await redeemAPI.getFeesToPay(amount);
@@ -160,15 +150,6 @@ describe("redeem", () => {
     it("should getDustValue", async () => {
         const dustValue = await redeemAPI.getDustValue();
         assert.equal(dustValue.str.BTC(), "0.00001");
-    });
-
-    it("should list redeem request by a vault", async () => {
-        const vaultToLiquidateAddress = vault_to_liquidate.address;
-        const vaultToLiquidateId = newAccountId(api, vaultToLiquidateAddress);
-        const redeemRequests = await redeemAPI.mapRedeemRequests(vaultToLiquidateId);
-        redeemRequests.forEach((request) => {
-            assert.deepEqual(request.vaultParachainAddress, vaultToLiquidateAddress);
-        });
     });
 
 });

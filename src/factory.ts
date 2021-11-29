@@ -5,11 +5,11 @@ import { ProviderInterface } from "@polkadot/rpc-provider/types";
 import { TypeRegistry } from "@polkadot/types";
 import { RegistryTypes } from "@polkadot/types/types";
 import { DefinitionRpc, DefinitionRpcSub } from "@polkadot/types/types";
-import { Currency, InterBtc } from "@interlay/monetary-js";
+import { InterBtc } from "@interlay/monetary-js";
 
 import * as definitions from "./interfaces/definitions";
 import { InterBTCAPI, DefaultInterBTCAPI } from "./interbtc-api";
-import { BitcoinNetwork, CollateralCurrency, CollateralUnit, WrappedCurrency } from "./types";
+import { BitcoinNetwork, CollateralCurrency, WrappedCurrency } from "./types";
 
 export function createProvider(endpoint: string, autoConnect?: number | false | undefined): ProviderInterface {
     if (/https?:\/\//.exec(endpoint)) {
@@ -23,9 +23,7 @@ export function createProvider(endpoint: string, autoConnect?: number | false | 
 
 export function createPolkadotAPI(endpoint: string, autoConnect?: number | false | undefined): Promise<ApiPromise> {
     const provider = createProvider(endpoint, autoConnect);
-    const types = getAPITypes();
-    const rpc = getRPCTypes();
-    return ApiPromise.create({ provider, types, rpc });
+    return ApiPromise.create({ provider });
 }
 
 export async function createInterbtcAPI(
